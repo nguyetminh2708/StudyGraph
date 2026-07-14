@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StudyGraph.Api/StudyGraph.Api.csproj" />
+  <Project Path="StudyGraph.Seeder/StudyGraph.Seeder.csproj" />
+</Solution>
