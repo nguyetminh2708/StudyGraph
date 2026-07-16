@@ -8,7 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="ArangoDBNetStandard" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>
