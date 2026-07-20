@@ -31,6 +31,9 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Learning document
+/doc/
+
 # .NET build outputs (any project)
 **/bin/
 **/obj/
