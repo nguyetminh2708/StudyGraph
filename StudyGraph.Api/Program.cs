@@ -21,6 +21,7 @@ builder.Services.AddSingleton<IArangoDBClient>(_ =>
 
 builder.Services.AddScoped<CourseRepository>();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<EnrollmentRepository>();
 var app = builder.Build();
 
 app.UseSwagger();
