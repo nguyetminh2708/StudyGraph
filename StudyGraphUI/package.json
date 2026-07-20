@@ -7,7 +7,15 @@
     "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "format": "prettier --write src",
     "preview": "vite preview"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "endOfLine": "auto",
+    "trailingComma": "none",
+    "semi": false
   },
   "dependencies": {
     "react": "^19.2.7",
@@ -20,9 +28,11 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
+    "prettier": "^3.9.5",
     "vite": "^8.1.1"
   }
 }
