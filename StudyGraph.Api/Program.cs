@@ -1,6 +1,8 @@
 using ArangoDBNetStandard;
 using ArangoDBNetStandard.CursorApi.Models;
 using ArangoDBNetStandard.Transport.Http;
+using Microsoft.AspNetCore.Authentication;
+using StudyGraph.Api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,12 +19,14 @@ builder.Services.AddSingleton<IArangoDBClient>(_ =>
     return new ArangoDBClient(transport);
 });
 
-
+builder.Services.AddScoped<CourseRepository>();
+builder.Services.AddScoped<UserRepository>();
 var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseMiddleware<AuthenticationMiddleware>();
 app.MapControllers();
 
 app.UseHttpsRedirection();

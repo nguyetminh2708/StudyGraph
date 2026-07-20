@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StudyGraph.Api.Models;
+using StudyGraph.Api.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,20 +8,32 @@ namespace StudyGraph.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CoursesController : ControllerBase
+    public class CoursesController(CourseRepository courses) : ControllerBase
     {
-        // GET: api/<CoursesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<PagedResult<Course>>> List(
+        [FromQuery] string? category,
+        [FromQuery] int? level,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
         {
-            return new string[] { "value1", "value2" };
+            if (page < 1) page = 1;
+            if (pageSize is < 1 or > 100) pageSize = 10;
+            return Ok(await courses.ListAsync(category, level, page, pageSize));
         }
 
-        // GET api/<CoursesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        /// <summary>GET /api/courses/{key} — chi tiết khóa + lessons (sort Order).</summary>
+        [HttpGet("{key}")]
+        public async Task<ActionResult<CourseDetailDto>> Get(string key)
         {
-            return "value";
+            var course = await courses.GetAsync(key);
+            if (course is null) return NotFound();
+
+            return Ok(new CourseDetailDto
+            {
+                Course = course,
+                Lessons = await courses.GetLessonsAsync(key)
+            });
         }
 
         // POST api/<CoursesController>
