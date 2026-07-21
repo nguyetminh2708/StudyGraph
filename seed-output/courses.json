@@ -1,0 +1,146 @@
+[
+  {
+    "_key": "c-sql-101",
+    "_id": null,
+    "Title": "SQL căn bản",
+    "Category": "Database",
+    "Level": 1,
+    "Description": "Khóa SQL căn bản thuộc track data.",
+    "Tags": [
+      "data",
+      "level1"
+    ]
+  },
+  {
+    "_key": "c-sql-201",
+    "_id": null,
+    "Title": "SQL nâng cao",
+    "Category": "Database",
+    "Level": 2,
+    "Description": "Khóa SQL nâng cao thuộc track data.",
+    "Tags": [
+      "data",
+      "level2"
+    ]
+  },
+  {
+    "_key": "c-dbdesign-301",
+    "_id": null,
+    "Title": "Thiết kế CSDL",
+    "Category": "Database",
+    "Level": 3,
+    "Description": "Khóa Thiết kế CSDL thuộc track data.",
+    "Tags": [
+      "data",
+      "level3"
+    ]
+  },
+  {
+    "_key": "c-cs-101",
+    "_id": null,
+    "Title": "C# căn bản",
+    "Category": "Backend",
+    "Level": 1,
+    "Description": "Khóa C# căn bản thuộc track be.",
+    "Tags": [
+      "be",
+      "level1"
+    ]
+  },
+  {
+    "_key": "c-cs-201",
+    "_id": null,
+    "Title": "C# nâng cao",
+    "Category": "Backend",
+    "Level": 2,
+    "Description": "Khóa C# nâng cao thuộc track be.",
+    "Tags": [
+      "be",
+      "level2"
+    ]
+  },
+  {
+    "_key": "c-aspnet-301",
+    "_id": null,
+    "Title": "ASP.NET Core",
+    "Category": "Backend",
+    "Level": 3,
+    "Description": "Khóa ASP.NET Core thuộc track be.",
+    "Tags": [
+      "be",
+      "level3"
+    ]
+  },
+  {
+    "_key": "c-html-101",
+    "_id": null,
+    "Title": "HTML & CSS",
+    "Category": "Frontend",
+    "Level": 1,
+    "Description": "Khóa HTML & CSS thuộc track fe.",
+    "Tags": [
+      "fe",
+      "level1"
+    ]
+  },
+  {
+    "_key": "c-js-201",
+    "_id": null,
+    "Title": "JavaScript",
+    "Category": "Frontend",
+    "Level": 2,
+    "Description": "Khóa JavaScript thuộc track fe.",
+    "Tags": [
+      "fe",
+      "level2"
+    ]
+  },
+  {
+    "_key": "c-react-301",
+    "_id": null,
+    "Title": "React",
+    "Category": "Frontend",
+    "Level": 3,
+    "Description": "Khóa React thuộc track fe.",
+    "Tags": [
+      "fe",
+      "level3"
+    ]
+  },
+  {
+    "_key": "c-linux-101",
+    "_id": null,
+    "Title": "Linux căn bản",
+    "Category": "DevOps",
+    "Level": 1,
+    "Description": "Khóa Linux căn bản thuộc track infra.",
+    "Tags": [
+      "infra",
+      "level1"
+    ]
+  },
+  {
+    "_key": "c-docker-201",
+    "_id": null,
+    "Title": "Docker",
+    "Category": "DevOps",
+    "Level": 2,
+    "Description": "Khóa Docker thuộc track infra.",
+    "Tags": [
+      "infra",
+      "level2"
+    ]
+  },
+  {
+    "_key": "c-aws-301",
+    "_id": null,
+    "Title": "AWS",
+    "Category": "DevOps",
+    "Level": 3,
+    "Description": "Khóa AWS thuộc track infra.",
+    "Tags": [
+      "infra",
+      "level3"
+    ]
+  }
+]

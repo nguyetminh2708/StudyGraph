@@ -1,0 +1,2174 @@
+[
+  {
+    "_from": "users/u001",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-07-10T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-06-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-06-23T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u002",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-04-24T00:00:00.0000000Z",
+    "Score": 68
+  },
+  {
+    "_from": "users/u003",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-27T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u003",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-06-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u003",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-08T00:00:00.0000000Z",
+    "Score": 100
+  },
+  {
+    "_from": "users/u003",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u003",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": 67
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-05-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-05-15T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-101-04",
+    "CompletedAt": "2026-05-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-01T00:00:00.0000000Z",
+    "Score": 65
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-04-14T00:00:00.0000000Z",
+    "Score": 72
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-04-25T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-04-25T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-05-14T00:00:00.0000000Z",
+    "Score": 76
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-04-23T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-04-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u004",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-04-28T00:00:00.0000000Z",
+    "Score": 98
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-27T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-12T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-13T00:00:00.0000000Z",
+    "Score": 81
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-05-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-05-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-04-17T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-05-06T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-101-04",
+    "CompletedAt": "2026-04-14T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-06-14T00:00:00.0000000Z",
+    "Score": 91
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": 79
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-201-04",
+    "CompletedAt": "2026-06-14T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-sql-201-05",
+    "CompletedAt": "2026-06-17T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u005",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-06-30T00:00:00.0000000Z",
+    "Score": 64
+  },
+  {
+    "_from": "users/u006",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": 79
+  },
+  {
+    "_from": "users/u006",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-06-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u006",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-06-05T00:00:00.0000000Z",
+    "Score": 100
+  },
+  {
+    "_from": "users/u006",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-05-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u006",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-06-10T00:00:00.0000000Z",
+    "Score": 72
+  },
+  {
+    "_from": "users/u006",
+    "_to": "lessons/l-sql-201-04",
+    "CompletedAt": "2026-05-22T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u007",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-07-09T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u007",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-07-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u007",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-05-21T00:00:00.0000000Z",
+    "Score": 68
+  },
+  {
+    "_from": "users/u007",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-05-29T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u008",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-02T00:00:00.0000000Z",
+    "Score": 77
+  },
+  {
+    "_from": "users/u008",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-04-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u008",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-06-23T00:00:00.0000000Z",
+    "Score": 82
+  },
+  {
+    "_from": "users/u008",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-06-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u008",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-06-18T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u008",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-07-05T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-05T00:00:00.0000000Z",
+    "Score": 76
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-07-05T00:00:00.0000000Z",
+    "Score": 72
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-07-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-07-12T00:00:00.0000000Z",
+    "Score": 76
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-cs-201-05",
+    "CompletedAt": "2026-06-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-05-16T00:00:00.0000000Z",
+    "Score": 98
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-05-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-04-26T00:00:00.0000000Z",
+    "Score": 98
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-05-01T00:00:00.0000000Z",
+    "Score": 94
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-04-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-04-22T00:00:00.0000000Z",
+    "Score": 62
+  },
+  {
+    "_from": "users/u009",
+    "_to": "lessons/l-sql-201-04",
+    "CompletedAt": "2026-04-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u010",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-27T00:00:00.0000000Z",
+    "Score": 93
+  },
+  {
+    "_from": "users/u010",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-06-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u010",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": 65
+  },
+  {
+    "_from": "users/u011",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-04-21T00:00:00.0000000Z",
+    "Score": 92
+  },
+  {
+    "_from": "users/u011",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u012",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": 97
+  },
+  {
+    "_from": "users/u012",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-05-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u012",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-06-18T00:00:00.0000000Z",
+    "Score": 74
+  },
+  {
+    "_from": "users/u012",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": 100
+  },
+  {
+    "_from": "users/u012",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u013",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": 89
+  },
+  {
+    "_from": "users/u013",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-05-31T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u013",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": 79
+  },
+  {
+    "_from": "users/u013",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-05-05T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u013",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-05-29T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u013",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": 96
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-17T00:00:00.0000000Z",
+    "Score": 91
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-17T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-23T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-05-14T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-14T00:00:00.0000000Z",
+    "Score": 80
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-05-25T00:00:00.0000000Z",
+    "Score": 88
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-05-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-05-13T00:00:00.0000000Z",
+    "Score": 93
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-05-12T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u014",
+    "_to": "lessons/l-sql-201-04",
+    "CompletedAt": "2026-05-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-04-16T00:00:00.0000000Z",
+    "Score": 89
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-06-05T00:00:00.0000000Z",
+    "Score": 100
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-05-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-06-10T00:00:00.0000000Z",
+    "Score": 70
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-dbdesign-301-01",
+    "CompletedAt": "2026-05-24T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-dbdesign-301-02",
+    "CompletedAt": "2026-05-22T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-dbdesign-301-03",
+    "CompletedAt": "2026-05-20T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u015",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-18T00:00:00.0000000Z",
+    "Score": 67
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-29T00:00:00.0000000Z",
+    "Score": 95
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-07-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-06-11T00:00:00.0000000Z",
+    "Score": 83
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-04-13T00:00:00.0000000Z",
+    "Score": 65
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-04-19T00:00:00.0000000Z",
+    "Score": 65
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-04-13T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-06-14T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u016",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-06-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-05-08T00:00:00.0000000Z",
+    "Score": 69
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-sql-101-02",
+    "CompletedAt": "2026-05-02T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-sql-101-03",
+    "CompletedAt": "2026-05-01T00:00:00.0000000Z",
+    "Score": 67
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-25T00:00:00.0000000Z",
+    "Score": 97
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": 96
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-06-13T00:00:00.0000000Z",
+    "Score": 77
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-06-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": 66
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-06-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u017",
+    "_to": "lessons/l-cs-201-05",
+    "CompletedAt": "2026-07-05T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-sql-101-01",
+    "CompletedAt": "2026-06-15T00:00:00.0000000Z",
+    "Score": 80
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-04-13T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-04-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-04-30T00:00:00.0000000Z",
+    "Score": 62
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-04-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-04-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-sql-201-01",
+    "CompletedAt": "2026-06-12T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-sql-201-02",
+    "CompletedAt": "2026-06-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-sql-201-03",
+    "CompletedAt": "2026-06-13T00:00:00.0000000Z",
+    "Score": 76
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-dbdesign-301-01",
+    "CompletedAt": "2026-06-09T00:00:00.0000000Z",
+    "Score": 95
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-dbdesign-301-02",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-dbdesign-301-03",
+    "CompletedAt": "2026-06-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-dbdesign-301-04",
+    "CompletedAt": "2026-06-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u018",
+    "_to": "lessons/l-dbdesign-301-05",
+    "CompletedAt": "2026-06-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": 82
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-05-18T00:00:00.0000000Z",
+    "Score": 75
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-05-21T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-05-07T00:00:00.0000000Z",
+    "Score": 85
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-cs-201-05",
+    "CompletedAt": "2026-05-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-aspnet-301-01",
+    "CompletedAt": "2026-07-17T00:00:00.0000000Z",
+    "Score": 91
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-aspnet-301-02",
+    "CompletedAt": "2026-06-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u019",
+    "_to": "lessons/l-aspnet-301-03",
+    "CompletedAt": "2026-07-05T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u020",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u020",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u020",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": 78
+  },
+  {
+    "_from": "users/u021",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": 92
+  },
+  {
+    "_from": "users/u021",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-07-03T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u021",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-07-02T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u022",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-23T00:00:00.0000000Z",
+    "Score": 82
+  },
+  {
+    "_from": "users/u022",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u022",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-18T00:00:00.0000000Z",
+    "Score": 97
+  },
+  {
+    "_from": "users/u022",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-04-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u022",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-05-23T00:00:00.0000000Z",
+    "Score": 94
+  },
+  {
+    "_from": "users/u022",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-05-17T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-04-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-04-17T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-05-12T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-04-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-05-19T00:00:00.0000000Z",
+    "Score": 69
+  },
+  {
+    "_from": "users/u023",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-05-14T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-17T00:00:00.0000000Z",
+    "Score": 74
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-02T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-05-26T00:00:00.0000000Z",
+    "Score": 93
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-05-23T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-html-101-05",
+    "CompletedAt": "2026-06-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-js-201-01",
+    "CompletedAt": "2026-05-08T00:00:00.0000000Z",
+    "Score": 94
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-js-201-02",
+    "CompletedAt": "2026-05-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-js-201-03",
+    "CompletedAt": "2026-05-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-react-301-01",
+    "CompletedAt": "2026-04-20T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-react-301-02",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u024",
+    "_to": "lessons/l-react-301-03",
+    "CompletedAt": "2026-05-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u025",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-23T00:00:00.0000000Z",
+    "Score": 74
+  },
+  {
+    "_from": "users/u025",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": 94
+  },
+  {
+    "_from": "users/u025",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-07-14T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u025",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-07-01T00:00:00.0000000Z",
+    "Score": 88
+  },
+  {
+    "_from": "users/u025",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-06-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-08T00:00:00.0000000Z",
+    "Score": 81
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-02T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-13T00:00:00.0000000Z",
+    "Score": 61
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-04-28T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-04-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-04-08T00:00:00.0000000Z",
+    "Score": 84
+  },
+  {
+    "_from": "users/u026",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-04-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-17T00:00:00.0000000Z",
+    "Score": 96
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": 93
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-06-26T00:00:00.0000000Z",
+    "Score": 65
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-06-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-05-27T00:00:00.0000000Z",
+    "Score": 76
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": 94
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-06-12T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-aspnet-301-01",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-aspnet-301-02",
+    "CompletedAt": "2026-06-05T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u027",
+    "_to": "lessons/l-aspnet-301-03",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u028",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-15T00:00:00.0000000Z",
+    "Score": 93
+  },
+  {
+    "_from": "users/u028",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-03T00:00:00.0000000Z",
+    "Score": 64
+  },
+  {
+    "_from": "users/u028",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u028",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": 92
+  },
+  {
+    "_from": "users/u029",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-07-01T00:00:00.0000000Z",
+    "Score": 96
+  },
+  {
+    "_from": "users/u029",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u029",
+    "_to": "lessons/l-js-201-01",
+    "CompletedAt": "2026-04-13T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u029",
+    "_to": "lessons/l-js-201-02",
+    "CompletedAt": "2026-04-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u030",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-02T00:00:00.0000000Z",
+    "Score": 77
+  },
+  {
+    "_from": "users/u030",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-06-12T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u031",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-17T00:00:00.0000000Z",
+    "Score": 96
+  },
+  {
+    "_from": "users/u031",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-28T00:00:00.0000000Z",
+    "Score": 79
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-06-22T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-06-22T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-html-101-05",
+    "CompletedAt": "2026-06-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-js-201-01",
+    "CompletedAt": "2026-06-01T00:00:00.0000000Z",
+    "Score": 96
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-js-201-02",
+    "CompletedAt": "2026-05-31T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-js-201-03",
+    "CompletedAt": "2026-05-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-react-301-01",
+    "CompletedAt": "2026-05-22T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-react-301-02",
+    "CompletedAt": "2026-05-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-react-301-03",
+    "CompletedAt": "2026-05-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-25T00:00:00.0000000Z",
+    "Score": 68
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-06-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": 72
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-06-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u032",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-06-23T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-05-29T00:00:00.0000000Z",
+    "Score": 91
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-05-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": 82
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-05-23T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-html-101-05",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-js-201-01",
+    "CompletedAt": "2026-06-21T00:00:00.0000000Z",
+    "Score": 95
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-js-201-02",
+    "CompletedAt": "2026-07-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-js-201-03",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-js-201-04",
+    "CompletedAt": "2026-07-02T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-js-201-05",
+    "CompletedAt": "2026-07-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-06T00:00:00.0000000Z",
+    "Score": 78
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-22T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u033",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-29T00:00:00.0000000Z",
+    "Score": 87
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-13T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-06-13T00:00:00.0000000Z",
+    "Score": 84
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-06-14T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-js-201-01",
+    "CompletedAt": "2026-05-12T00:00:00.0000000Z",
+    "Score": 83
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-js-201-02",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-js-201-03",
+    "CompletedAt": "2026-05-21T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-react-301-01",
+    "CompletedAt": "2026-04-30T00:00:00.0000000Z",
+    "Score": 91
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-react-301-02",
+    "CompletedAt": "2026-04-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-react-301-03",
+    "CompletedAt": "2026-04-22T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-react-301-04",
+    "CompletedAt": "2026-04-19T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-react-301-05",
+    "CompletedAt": "2026-05-02T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-26T00:00:00.0000000Z",
+    "Score": 95
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-06-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-06-06T00:00:00.0000000Z",
+    "Score": 64
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u034",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-05-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-28T00:00:00.0000000Z",
+    "Score": 94
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-06-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-06-11T00:00:00.0000000Z",
+    "Score": 82
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-05-13T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-05-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-05-20T00:00:00.0000000Z",
+    "Score": 63
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-05-22T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-html-101-05",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-04-24T00:00:00.0000000Z",
+    "Score": 84
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-05-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u035",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u036",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-06-27T00:00:00.0000000Z",
+    "Score": 62
+  },
+  {
+    "_from": "users/u036",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u036",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-06-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u036",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-06-17T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u036",
+    "_to": "lessons/l-cs-101-04",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u036",
+    "_to": "lessons/l-cs-101-05",
+    "CompletedAt": "2026-07-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u037",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-05-25T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u037",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-06-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u037",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": 100
+  },
+  {
+    "_from": "users/u037",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-20T00:00:00.0000000Z",
+    "Score": 62
+  },
+  {
+    "_from": "users/u037",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-05-31T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u037",
+    "_to": "lessons/l-cs-101-03",
+    "CompletedAt": "2026-05-15T00:00:00.0000000Z",
+    "Score": 92
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-07-12T00:00:00.0000000Z",
+    "Score": 91
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-101-02",
+    "CompletedAt": "2026-07-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-04-08T00:00:00.0000000Z",
+    "Score": 89
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-04-15T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-04-10T00:00:00.0000000Z",
+    "Score": 83
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-html-101-04",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-201-01",
+    "CompletedAt": "2026-06-25T00:00:00.0000000Z",
+    "Score": 99
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-201-02",
+    "CompletedAt": "2026-06-12T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-201-03",
+    "CompletedAt": "2026-06-05T00:00:00.0000000Z",
+    "Score": 77
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-201-04",
+    "CompletedAt": "2026-06-26T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-cs-201-05",
+    "CompletedAt": "2026-06-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-js-201-01",
+    "CompletedAt": "2026-05-04T00:00:00.0000000Z",
+    "Score": 78
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-js-201-02",
+    "CompletedAt": "2026-04-27T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-js-201-03",
+    "CompletedAt": "2026-05-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u038",
+    "_to": "lessons/l-js-201-04",
+    "CompletedAt": "2026-04-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u039",
+    "_to": "lessons/l-html-101-01",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": 63
+  },
+  {
+    "_from": "users/u039",
+    "_to": "lessons/l-html-101-02",
+    "CompletedAt": "2026-04-16T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u039",
+    "_to": "lessons/l-html-101-03",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": 81
+  },
+  {
+    "_from": "users/u039",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-05-21T00:00:00.0000000Z",
+    "Score": 100
+  },
+  {
+    "_from": "users/u040",
+    "_to": "lessons/l-cs-101-01",
+    "CompletedAt": "2026-04-18T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u041",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-05-09T00:00:00.0000000Z",
+    "Score": 62
+  },
+  {
+    "_from": "users/u041",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-04-29T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-06-13T00:00:00.0000000Z",
+    "Score": 93
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-06-25T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-05-02T00:00:00.0000000Z",
+    "Score": 66
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-04-21T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-docker-201-03",
+    "CompletedAt": "2026-05-05T00:00:00.0000000Z",
+    "Score": 66
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-docker-201-04",
+    "CompletedAt": "2026-05-12T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-docker-201-05",
+    "CompletedAt": "2026-05-06T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u042",
+    "_to": "lessons/l-aws-301-01",
+    "CompletedAt": "2026-06-19T00:00:00.0000000Z",
+    "Score": 70
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-05-14T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-05-19T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-linux-101-03",
+    "CompletedAt": "2026-05-18T00:00:00.0000000Z",
+    "Score": 83
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-linux-101-04",
+    "CompletedAt": "2026-04-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-04-27T00:00:00.0000000Z",
+    "Score": 66
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-aws-301-01",
+    "CompletedAt": "2026-06-22T00:00:00.0000000Z",
+    "Score": 74
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-aws-301-02",
+    "CompletedAt": "2026-07-17T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u043",
+    "_to": "lessons/l-aws-301-03",
+    "CompletedAt": "2026-06-29T00:00:00.0000000Z",
+    "Score": 89
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-06-08T00:00:00.0000000Z",
+    "Score": 70
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-05-21T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-linux-101-03",
+    "CompletedAt": "2026-06-04T00:00:00.0000000Z",
+    "Score": 70
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-linux-101-04",
+    "CompletedAt": "2026-06-08T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-06-05T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-05-18T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u044",
+    "_to": "lessons/l-docker-201-03",
+    "CompletedAt": "2026-05-30T00:00:00.0000000Z",
+    "Score": 86
+  },
+  {
+    "_from": "users/u045",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-04-29T00:00:00.0000000Z",
+    "Score": 83
+  },
+  {
+    "_from": "users/u045",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-04-23T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u045",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-05-24T00:00:00.0000000Z",
+    "Score": 69
+  },
+  {
+    "_from": "users/u045",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-05-24T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u045",
+    "_to": "lessons/l-docker-201-03",
+    "CompletedAt": "2026-05-29T00:00:00.0000000Z",
+    "Score": 66
+  },
+  {
+    "_from": "users/u045",
+    "_to": "lessons/l-docker-201-04",
+    "CompletedAt": "2026-05-13T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-07-01T00:00:00.0000000Z",
+    "Score": 63
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-06-30T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-05-29T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-06-03T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-aws-301-01",
+    "CompletedAt": "2026-06-20T00:00:00.0000000Z",
+    "Score": 95
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-aws-301-02",
+    "CompletedAt": "2026-06-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u046",
+    "_to": "lessons/l-aws-301-03",
+    "CompletedAt": "2026-06-01T00:00:00.0000000Z",
+    "Score": 90
+  },
+  {
+    "_from": "users/u047",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-05-29T00:00:00.0000000Z",
+    "Score": 80
+  },
+  {
+    "_from": "users/u047",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-06-01T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u047",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-06-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u047",
+    "_to": "lessons/l-docker-201-03",
+    "CompletedAt": "2026-06-02T00:00:00.0000000Z",
+    "Score": 71
+  },
+  {
+    "_from": "users/u047",
+    "_to": "lessons/l-docker-201-04",
+    "CompletedAt": "2026-06-10T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u048",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-07-03T00:00:00.0000000Z",
+    "Score": 63
+  },
+  {
+    "_from": "users/u048",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-06-22T00:00:00.0000000Z",
+    "Score": 67
+  },
+  {
+    "_from": "users/u048",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-06-04T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u048",
+    "_to": "lessons/l-docker-201-03",
+    "CompletedAt": "2026-06-01T00:00:00.0000000Z",
+    "Score": 98
+  },
+  {
+    "_from": "users/u048",
+    "_to": "lessons/l-docker-201-04",
+    "CompletedAt": "2026-06-09T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u049",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-05-25T00:00:00.0000000Z",
+    "Score": 63
+  },
+  {
+    "_from": "users/u049",
+    "_to": "lessons/l-linux-101-02",
+    "CompletedAt": "2026-05-11T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u049",
+    "_to": "lessons/l-docker-201-01",
+    "CompletedAt": "2026-06-24T00:00:00.0000000Z",
+    "Score": 73
+  },
+  {
+    "_from": "users/u049",
+    "_to": "lessons/l-docker-201-02",
+    "CompletedAt": "2026-07-05T00:00:00.0000000Z",
+    "Score": null
+  },
+  {
+    "_from": "users/u049",
+    "_to": "lessons/l-aws-301-01",
+    "CompletedAt": "2026-07-09T00:00:00.0000000Z",
+    "Score": 80
+  },
+  {
+    "_from": "users/u050",
+    "_to": "lessons/l-linux-101-01",
+    "CompletedAt": "2026-06-11T00:00:00.0000000Z",
+    "Score": 60
+  }
+]

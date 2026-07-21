@@ -1,0 +1,402 @@
+[
+  {
+    "_key": "u001",
+    "_id": null,
+    "Name": "Phạm An",
+    "Email": "user001@studygraph.dev",
+    "Role": "admin",
+    "CreatedAt": "2026-01-18T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u002",
+    "_id": null,
+    "Name": "Hoàng An",
+    "Email": "user002@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-28T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u003",
+    "_id": null,
+    "Name": "Lê Linh",
+    "Email": "user003@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-03T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u004",
+    "_id": null,
+    "Name": "Đặng An",
+    "Email": "user004@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-30T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u005",
+    "_id": null,
+    "Name": "Hoàng Hà",
+    "Email": "user005@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-22T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u006",
+    "_id": null,
+    "Name": "Trần Thảo",
+    "Email": "user006@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-29T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u007",
+    "_id": null,
+    "Name": "Phạm Nam",
+    "Email": "user007@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-03T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u008",
+    "_id": null,
+    "Name": "Nguyễn Thảo",
+    "Email": "user008@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-17T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u009",
+    "_id": null,
+    "Name": "Lê Minh",
+    "Email": "user009@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-25T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u010",
+    "_id": null,
+    "Name": "Nguyễn An",
+    "Email": "user010@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-03T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u011",
+    "_id": null,
+    "Name": "Đặng Phương",
+    "Email": "user011@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-16T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u012",
+    "_id": null,
+    "Name": "Đặng Phương",
+    "Email": "user012@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-22T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u013",
+    "_id": null,
+    "Name": "Lê Bình",
+    "Email": "user013@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-16T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u014",
+    "_id": null,
+    "Name": "Nguyễn Phương",
+    "Email": "user014@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-21T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u015",
+    "_id": null,
+    "Name": "Hoàng Khánh",
+    "Email": "user015@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-11T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u016",
+    "_id": null,
+    "Name": "Vũ Hà",
+    "Email": "user016@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-12T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u017",
+    "_id": null,
+    "Name": "Lê Khánh",
+    "Email": "user017@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-16T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u018",
+    "_id": null,
+    "Name": "Vũ An",
+    "Email": "user018@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-01T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u019",
+    "_id": null,
+    "Name": "Phạm Nam",
+    "Email": "user019@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-03T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u020",
+    "_id": null,
+    "Name": "Nguyễn Bình",
+    "Email": "user020@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-11T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u021",
+    "_id": null,
+    "Name": "Bùi Nam",
+    "Email": "user021@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-06T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u022",
+    "_id": null,
+    "Name": "Trần Hà",
+    "Email": "user022@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-03T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u023",
+    "_id": null,
+    "Name": "Đặng An",
+    "Email": "user023@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-07T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u024",
+    "_id": null,
+    "Name": "Nguyễn Nam",
+    "Email": "user024@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-14T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u025",
+    "_id": null,
+    "Name": "Nguyễn Quân",
+    "Email": "user025@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-16T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u026",
+    "_id": null,
+    "Name": "Lê Hà",
+    "Email": "user026@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-20T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u027",
+    "_id": null,
+    "Name": "Phạm Quân",
+    "Email": "user027@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-31T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u028",
+    "_id": null,
+    "Name": "Lê An",
+    "Email": "user028@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-16T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u029",
+    "_id": null,
+    "Name": "Bùi Bình",
+    "Email": "user029@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-17T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u030",
+    "_id": null,
+    "Name": "Nguyễn Thảo",
+    "Email": "user030@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-25T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u031",
+    "_id": null,
+    "Name": "Trần Quân",
+    "Email": "user031@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-10T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u032",
+    "_id": null,
+    "Name": "Nguyễn Khánh",
+    "Email": "user032@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-23T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u033",
+    "_id": null,
+    "Name": "Nguyễn Nam",
+    "Email": "user033@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-15T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u034",
+    "_id": null,
+    "Name": "Đặng Chi",
+    "Email": "user034@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-19T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u035",
+    "_id": null,
+    "Name": "Lê Linh",
+    "Email": "user035@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-03T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u036",
+    "_id": null,
+    "Name": "Đặng Bình",
+    "Email": "user036@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-10T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u037",
+    "_id": null,
+    "Name": "Hoàng Hà",
+    "Email": "user037@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-27T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u038",
+    "_id": null,
+    "Name": "Hoàng Hà",
+    "Email": "user038@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-15T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u039",
+    "_id": null,
+    "Name": "Bùi Hà",
+    "Email": "user039@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-28T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u040",
+    "_id": null,
+    "Name": "Hoàng Chi",
+    "Email": "user040@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-26T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u041",
+    "_id": null,
+    "Name": "Trần Bình",
+    "Email": "user041@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-20T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u042",
+    "_id": null,
+    "Name": "Đặng An",
+    "Email": "user042@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-21T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u043",
+    "_id": null,
+    "Name": "Vũ Bình",
+    "Email": "user043@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-10T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u044",
+    "_id": null,
+    "Name": "Nguyễn Nam",
+    "Email": "user044@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-27T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u045",
+    "_id": null,
+    "Name": "Đặng Chi",
+    "Email": "user045@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-18T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u046",
+    "_id": null,
+    "Name": "Bùi Bình",
+    "Email": "user046@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-01T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u047",
+    "_id": null,
+    "Name": "Bùi Dũng",
+    "Email": "user047@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-02-26T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u048",
+    "_id": null,
+    "Name": "Nguyễn Phương",
+    "Email": "user048@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-02T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u049",
+    "_id": null,
+    "Name": "Lê Bình",
+    "Email": "user049@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-01-24T00:00:00.0000000Z"
+  },
+  {
+    "_key": "u050",
+    "_id": null,
+    "Name": "Phạm Thảo",
+    "Email": "user050@studygraph.dev",
+    "Role": "student",
+    "CreatedAt": "2026-03-31T00:00:00.0000000Z"
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "_from": "users/u001",
+    "_to": "courses/c-sql-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u002",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u004",
+    "_to": "courses/c-cs-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u004",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u005",
+    "_to": "courses/c-cs-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u005",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u006",
+    "_to": "courses/c-sql-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u006",
+    "_to": "courses/c-sql-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u006",
+    "_to": "courses/c-react-301",
+    "Stars": 3,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u007",
+    "_to": "courses/c-cs-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u007",
+    "_to": "courses/c-js-201",
+    "Stars": 2,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u008",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u008",
+    "_to": "courses/c-cs-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u009",
+    "_to": "courses/c-sql-201",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u009",
+    "_to": "courses/c-sql-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u010",
+    "_to": "courses/c-sql-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u010",
+    "_to": "courses/c-sql-201",
+    "Stars": 2,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u011",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u012",
+    "_to": "courses/c-sql-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u012",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u013",
+    "_to": "courses/c-sql-201",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u013",
+    "_to": "courses/c-sql-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u014",
+    "_to": "courses/c-sql-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u016",
+    "_to": "courses/c-sql-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u017",
+    "_to": "courses/c-cs-201",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u018",
+    "_to": "courses/c-dbdesign-301",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u020",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u021",
+    "_to": "courses/c-html-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u023",
+    "_to": "courses/c-cs-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u024",
+    "_to": "courses/c-aws-301",
+    "Stars": 2,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u026",
+    "_to": "courses/c-cs-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u026",
+    "_to": "courses/c-cs-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u027",
+    "_to": "courses/c-cs-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u029",
+    "_to": "courses/c-js-201",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u030",
+    "_to": "courses/c-cs-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u031",
+    "_to": "courses/c-html-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u032",
+    "_to": "courses/c-react-301",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u032",
+    "_to": "courses/c-sql-201",
+    "Stars": 2,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u035",
+    "_to": "courses/c-cs-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u036",
+    "_to": "courses/c-html-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u036",
+    "_to": "courses/c-cs-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u036",
+    "_to": "courses/c-docker-201",
+    "Stars": 2,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u037",
+    "_to": "courses/c-dbdesign-301",
+    "Stars": 3,
+    "Comment": "Không hợp với mình"
+  },
+  {
+    "_from": "users/u038",
+    "_to": "courses/c-html-101",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u042",
+    "_to": "courses/c-linux-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u042",
+    "_to": "courses/c-docker-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u043",
+    "_to": "courses/c-docker-201",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u044",
+    "_to": "courses/c-linux-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u047",
+    "_to": "courses/c-docker-201",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u048",
+    "_to": "courses/c-linux-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u048",
+    "_to": "courses/c-docker-201",
+    "Stars": 4,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u050",
+    "_to": "courses/c-linux-101",
+    "Stars": 5,
+    "Comment": "Khóa học hữu ích"
+  },
+  {
+    "_from": "users/u050",
+    "_to": "courses/c-sql-101",
+    "Stars": 1,
+    "Comment": "Không hợp với mình"
+  }
+]

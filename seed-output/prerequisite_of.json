@@ -1,0 +1,38 @@
+[
+  {
+    "_from": "courses/c-sql-101",
+    "_to": "courses/c-sql-201"
+  },
+  {
+    "_from": "courses/c-sql-201",
+    "_to": "courses/c-dbdesign-301"
+  },
+  {
+    "_from": "courses/c-cs-101",
+    "_to": "courses/c-cs-201"
+  },
+  {
+    "_from": "courses/c-cs-201",
+    "_to": "courses/c-aspnet-301"
+  },
+  {
+    "_from": "courses/c-sql-101",
+    "_to": "courses/c-aspnet-301"
+  },
+  {
+    "_from": "courses/c-html-101",
+    "_to": "courses/c-js-201"
+  },
+  {
+    "_from": "courses/c-js-201",
+    "_to": "courses/c-react-301"
+  },
+  {
+    "_from": "courses/c-linux-101",
+    "_to": "courses/c-docker-201"
+  },
+  {
+    "_from": "courses/c-docker-201",
+    "_to": "courses/c-aws-301"
+  }
+]
