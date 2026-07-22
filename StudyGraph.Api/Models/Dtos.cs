@@ -93,4 +93,19 @@
         public int Total { get; set; }
         public int Score { get; set; }                          // 0..100, lưu vào edge completed
     }
+
+    // Đăng nhập tối giản:
+    // student nhập Email, nhận về UserKey để gắn vào header X-User-Key.
+    public class LoginRequest
+    {
+        public string Email { get; set; } = default!;
+    }
+
+    public class LoginResponse
+    {
+        public string UserKey { get; set; } = default!;         // dùng làm giá trị X-User-Key
+        public string Name { get; set; } = default!;
+        public string Email { get; set; } = default!;
+        public string Role { get; set; } = default!;
+    }
 }

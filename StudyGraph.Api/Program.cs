@@ -3,6 +3,7 @@ using ArangoDBNetStandard.CursorApi.Models;
 using ArangoDBNetStandard.Transport.Http;
 using Microsoft.AspNetCore.Authentication;
 using StudyGraph.Api.Repositories;
+using StudyGraph.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,10 @@ builder.Services.AddSingleton<IArangoDBClient>(_ =>
 builder.Services.AddScoped<CourseRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<EnrollmentRepository>();
+builder.Services.AddScoped<RecommendationRepository>();
+builder.Services.AddScoped<QuizRepository>();
+builder.Services.AddScoped<RecommendationService>();
+builder.Services.AddScoped<QuizService>();
 var app = builder.Build();
 
 app.UseSwagger();
@@ -31,12 +36,5 @@ app.UseMiddleware<AuthenticationMiddleware>();
 app.MapControllers();
 
 app.UseHttpsRedirection();
-
-app.MapGet("/api/health", async (IArangoDBClient client) =>
-{
-    var cursor = await client.Cursor.PostCursorAsync<string>(
-        new PostCursorBody { Query = "RETURN VERSION()" });
-    return Results.Ok(new { Db = "studygraph", ArangoVersion = cursor.Result.First() });
-});
 
 app.Run();

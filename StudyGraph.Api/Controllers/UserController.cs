@@ -12,8 +12,37 @@ namespace StudyGraph.Api.Controllers
     [ApiController]
     public class UserController(
     EnrollmentRepository enrollments,
-    RecommendationService recommendationService) : ControllerBase
+    RecommendationService recommendationService,
+    UserRepository users) : ControllerBase
     {
+        /// <summary>
+        /// POST /api/user/login — đăng nhập tối giản cho student:
+        /// nhập Email, trả về UserKey để client gắn vào header X-User-Key
+        /// cho các request sau. Không password/JWT — ghi vào "hướng phát triển".
+        /// </summary>
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Email))
+                return BadRequest(new { Error = "Email không được để trống" });
+
+            var user = await users.GetByEmailAsync(request.Email.Trim());
+            if (user is null)
+                return Unauthorized(new { Error = "Email không tồn tại trong hệ thống" });
+
+            if (user.Role != "student")
+                return StatusCode(StatusCodes.Status403Forbidden,
+                    new { Error = "Endpoint này chỉ dành cho student" });
+
+            return Ok(new LoginResponse
+            {
+                UserKey = user.Key,
+                Name = user.Name,
+                Email = user.Email,
+                Role = user.Role
+            });
+        }
+
         /// <summary>GET /api/user/progress — tiến độ các khóa đã ghi danh.</summary>
         [HttpGet("progress")]
         public async Task<ActionResult<List<ProgressItem>>> Progress()
