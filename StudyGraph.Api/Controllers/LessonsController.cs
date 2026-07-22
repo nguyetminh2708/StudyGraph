@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StudyGraph.Api.NewFolder;
+using StudyGraph.Api.Middleware;
 using StudyGraph.Api.Repositories;
 
 namespace StudyGraph.Api.Controllers

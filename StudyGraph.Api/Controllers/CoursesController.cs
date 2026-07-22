@@ -1,7 +1,7 @@
 ﻿using ArangoDBNetStandard;
 using Microsoft.AspNetCore.Mvc;
+using StudyGraph.Api.Middleware;
 using StudyGraph.Api.Models;
-using StudyGraph.Api.NewFolder;
 using StudyGraph.Api.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860

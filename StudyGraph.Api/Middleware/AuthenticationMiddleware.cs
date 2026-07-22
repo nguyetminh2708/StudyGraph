@@ -1,7 +1,7 @@
 ﻿using StudyGraph.Api.Models;
 using StudyGraph.Api.Repositories;
 
-namespace StudyGraph.Api.NewFolder
+namespace StudyGraph.Api.Middleware
 {
     public class AuthenticationMiddleware(RequestDelegate next)
     {

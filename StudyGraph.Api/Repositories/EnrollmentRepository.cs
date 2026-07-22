@@ -25,7 +25,7 @@ namespace StudyGraph.Api.Repositories
           RETURN e._to
         """;
 
-        // @myCompletedCourseIds trong Q2 = các khóa có Progress 100 (tính từ enrolled_in) — mục 5
+        // @myCompletedCourseIds trong Q2 = các khóa có Progress 100 (tính từ enrolled_in)
         private const string MyCompletedCourseIdsAql = """
         FOR e IN enrolled_in
           FILTER e._from == @userId AND e.Progress == 100
