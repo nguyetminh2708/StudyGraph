@@ -24,8 +24,8 @@ export const post = (path, body) => api(path, { method: 'POST', body: JSON.strin
 
 export async function login(email) {
   const user = await post('/api/user/login', { Email: email })
-  localStorage.setItem(USER_KEY, user.UserKey)
-  localStorage.setItem(USER_NAME, user.Name)
+  localStorage.setItem(USER_KEY, user.userKey)
+  localStorage.setItem(USER_NAME, user.name)
   return user
 }
 
