@@ -1,7 +1,7 @@
 using ArangoDBNetStandard;
 using ArangoDBNetStandard.CursorApi.Models;
 using ArangoDBNetStandard.Transport.Http;
-using Microsoft.AspNetCore.Authentication;
+using StudyGraph.Api.Middleware;
 using StudyGraph.Api.Repositories;
 using StudyGraph.Api.Services;
 
@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ---- ArangoDB client (ArangoDBNetStandard) — singleton, dùng chung HttpClient ----
+// ---- ArangoDB client (ArangoDBNetStandard) ï¿½ singleton, dï¿½ng chung HttpClient ----
 builder.Services.AddSingleton<IArangoDBClient>(_ =>
 {
     var cfg = builder.Configuration.GetSection("Arango");
@@ -34,7 +34,5 @@ app.UseSwaggerUI();
 
 app.UseMiddleware<AuthenticationMiddleware>();
 app.MapControllers();
-
-app.UseHttpsRedirection();
 
 app.Run();
