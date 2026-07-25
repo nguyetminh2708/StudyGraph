@@ -179,3 +179,105 @@
   font-size: 13px;
   color: var(--accent);
 }
+
+.form-success {
+  color: #16a34a;
+  font-size: 14px;
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.enroll-status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 420px;
+  margin: 12px 0;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.path-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.path-badge {
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.path-badge:not(:first-child)::before {
+  content: '→ ';
+  color: var(--text);
+}
+
+.path-badge.current {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 22px;
+}
+
+.lesson-list a {
+  color: var(--text-h);
+}
+
+.lesson-list a:hover {
+  color: var(--accent);
+}
+
+.lesson-content {
+  white-space: pre-wrap;
+  max-width: 720px;
+}
+
+.quiz-question {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 0 0 14px;
+  max-width: 720px;
+}
+
+.quiz-question legend {
+  font-weight: 600;
+  color: var(--text-h);
+  padding: 0 6px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}

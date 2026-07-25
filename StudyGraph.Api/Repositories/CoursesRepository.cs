@@ -33,11 +33,15 @@ namespace StudyGraph.Api.Repositories
           RETURN l
         """;
 
+        private const string LessonByKeyAql = """
+        RETURN DOCUMENT("lessons", @key)
+        """;
+
         // Q3 — Learning path: cần học gì trước khi vào 1 khóa nâng cao (nguyên văn mục 5)
         // Toàn bộ chuỗi điều kiện (đệ quy tới 5 tầng), kèm độ sâu để vẽ lộ trình
         private const string LearningPathAql = """        
         FOR v, e, p IN 1..5 INBOUND @courseId prerequisite_of
-          OPTIONS { uniqueVertices: "global" }
+          OPTIONS { uniqueVertices: "global", order: "bfs" }
           RETURN DISTINCT { Course: v, Depth: LENGTH(p.edges) }
         """;
 
@@ -100,6 +104,17 @@ namespace StudyGraph.Api.Repositories
                     BindVars = new Dictionary<string, object> { ["courseKey"] = courseKey }
                 });
             return cursor.Result.ToList();
+        }
+
+        public async Task<Lesson?> GetLessonAsync(string key)
+        {
+            var cursor = await client.Cursor.PostCursorAsync<Lesson?>(
+                new PostCursorBody
+                {
+                    Query = LessonByKeyAql,
+                    BindVars = new Dictionary<string, object> { ["key"] = key }
+                });
+            return cursor.Result.FirstOrDefault();
         }
 
         public async Task<List<LearningPathStep>> GetLearningPathAsync(string courseKey)

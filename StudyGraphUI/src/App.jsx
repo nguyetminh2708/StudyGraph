@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import { isLoggedIn } from './api'
 import Layout from './components/Layout'
+import Course from './pages/Course'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import './App.css'
@@ -15,6 +16,7 @@ export default function App() {
         <Route element={<RequireAuth />}>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/courses/:key" element={<Course />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
