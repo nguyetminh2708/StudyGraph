@@ -11,4 +11,8 @@
     <PackageReference Include="ArangoDBNetStandard" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StudyGraph.Api\StudyGraph.Api.csproj" />
+  </ItemGroup>
+
 </Project>
