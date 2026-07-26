@@ -19,6 +19,33 @@ namespace StudyGraph.Api.Repositories
         RETURN NEW
         """;
 
+        // Chưa ghi danh thì KHÔNG được ghi edge completed — check trước khi upsert
+        private const string IsEnrolledForLessonAql = """
+        LET lesson = DOCUMENT(@lessonId)
+        LET courseId = CONCAT("courses/", lesson.CourseKey)
+        FOR e IN enrolled_in
+          FILTER e._from == @userId AND e._to == courseId
+          RETURN 1
+        """;
+
+        // Tính lại Progress ngay khi ghi danh — phòng user đã có sẵn edge completed
+        // (data cũ bị lệch, hoặc re-enroll) thì % hiển thị đúng ngay từ đầu
+        private const string RecomputeProgressByCourseAql = """
+        LET total = LENGTH(FOR l IN lessons FILTER l.CourseKey == @courseKey RETURN 1)
+        LET done = LENGTH(
+          FOR c IN completed
+            FILTER c._from == @userId
+            LET ld = DOCUMENT(c._to)
+            FILTER ld.CourseKey == @courseKey
+            RETURN 1
+        )
+        LET progress = total == 0 ? 0 : ROUND(100 * done / total)
+        FOR e IN enrolled_in
+          FILTER e._from == @userId AND e._to == CONCAT("courses/", @courseKey)
+          UPDATE e WITH { Progress: progress } IN enrolled_in
+          RETURN NEW
+        """;
+
         private const string MyCourseIdsAql = """
         FOR e IN enrolled_in
           FILTER e._from == @userId
@@ -35,7 +62,7 @@ namespace StudyGraph.Api.Repositories
         private const string UpsertCompletedAql = """
         UPSERT { _from: @userId, _to: @lessonId }
         INSERT { _from: @userId, _to: @lessonId, CompletedAt: @now, Score: @score }
-        UPDATE @score == null ? { CompletedAt: @now } : { CompletedAt: @now, Score: @score }
+        UPDATE (@score == null ? { CompletedAt: @now } : { CompletedAt: @now, Score: @score })
         IN completed
         RETURN NEW
         """;
@@ -68,9 +95,23 @@ namespace StudyGraph.Api.Repositories
           RETURN { Course: c, Progress: e.Progress, EnrolledAt: e.EnrolledAt }
         """;
 
+        private const string CompletedEdgeAql = """
+        FOR e IN completed
+          FILTER e._from == @userId AND e._to == @lessonId
+          RETURN e
+        """;
+
+        private const string CompletedLessonKeysAql = """
+        FOR e IN completed
+          FILTER e._from == @userId
+          LET l = DOCUMENT(e._to)
+          FILTER l.CourseKey == @courseKey
+          RETURN l._key
+        """;
+
         public async Task<EnrolledInEdge> EnrollAsync(string userKey, string courseKey)
         {
-            var cursor = await client.Cursor.PostCursorAsync<EnrolledInEdge>(
+            await client.Cursor.PostCursorAsync<EnrolledInEdge>(
                 new PostCursorBody
                 {
                     Query = EnrollAql,
@@ -81,7 +122,18 @@ namespace StudyGraph.Api.Repositories
                         ["now"] = DateTime.UtcNow.ToString("o")
                     }
                 });
-            return cursor.Result.First();
+
+            var recomputed = await client.Cursor.PostCursorAsync<EnrolledInEdge>(
+                new PostCursorBody
+                {
+                    Query = RecomputeProgressByCourseAql,
+                    BindVars = new Dictionary<string, object>
+                    {
+                        ["userId"] = $"users/{userKey}",
+                        ["courseKey"] = courseKey
+                    }
+                });
+            return recomputed.Result.First();
         }
 
         public async Task<List<string>> GetMyCourseIdsAsync(string userId)
@@ -116,6 +168,18 @@ namespace StudyGraph.Api.Repositories
             var userId = $"users/{userKey}";
             var lessonId = $"lessons/{lessonKey}";
 
+            var enrolledCheck = await client.Cursor.PostCursorAsync<int>(
+                new PostCursorBody
+                {
+                    Query = IsEnrolledForLessonAql,
+                    BindVars = new Dictionary<string, object>
+                    {
+                        ["userId"] = userId,
+                        ["lessonId"] = lessonId
+                    }
+                });
+            if (!enrolledCheck.Result.Any()) return null;
+
             await client.Cursor.PostCursorAsync<CompletedEdge>(
                 new PostCursorBody
                 {
@@ -140,6 +204,38 @@ namespace StudyGraph.Api.Repositories
                     }
                 });
             return progressCursor.Result.FirstOrDefault();
+        }
+
+        /// <summary>Edge completed của user với 1 bài học — null nếu chưa hoàn thành.</summary>
+        public async Task<CompletedEdge?> GetCompletedEdgeAsync(string userKey, string lessonKey)
+        {
+            var cursor = await client.Cursor.PostCursorAsync<CompletedEdge?>(
+                new PostCursorBody
+                {
+                    Query = CompletedEdgeAql,
+                    BindVars = new Dictionary<string, object>
+                    {
+                        ["userId"] = $"users/{userKey}",
+                        ["lessonId"] = $"lessons/{lessonKey}"
+                    }
+                });
+            return cursor.Result.FirstOrDefault();
+        }
+
+        /// <summary>Key các bài học user đã hoàn thành trong 1 khóa — để UI đánh dấu ✓.</summary>
+        public async Task<List<string>> GetCompletedLessonKeysAsync(string userKey, string courseKey)
+        {
+            var cursor = await client.Cursor.PostCursorAsync<string>(
+                new PostCursorBody
+                {
+                    Query = CompletedLessonKeysAql,
+                    BindVars = new Dictionary<string, object>
+                    {
+                        ["userId"] = $"users/{userKey}",
+                        ["courseKey"] = courseKey
+                    }
+                });
+            return cursor.Result.ToList();
         }
 
         public async Task<List<ProgressItem>> GetMyProgressAsync(string userId)
