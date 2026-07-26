@@ -75,7 +75,7 @@ export default function Lesson() {
   const idx = siblings.findIndex((l) => l.key === key)
   const prev = idx > 0 ? siblings[idx - 1] : null
   const next = idx >= 0 && idx < siblings.length - 1 ? siblings[idx + 1] : null
-  const justDone = result != null || progress != null
+  const justDone = result?.passed || progress != null
   const allAnswered = quiz != null && quiz.questions.every((_, i) => answers[i] !== undefined)
 
   return (
@@ -126,10 +126,28 @@ export default function Lesson() {
             </fieldset>
           ))}
           {result ? (
-            <p className="form-success">
-              Đúng {result.correct}/{result.total} — điểm {result.score}/100. Bài học đã tính hoàn thành, tiến độ khóa
-              đã cập nhật 🎉
-            </p>
+            result.passed ? (
+              <p className="form-success">
+                Đạt! Đúng {result.correct}/{result.total} — điểm {result.score}/100. Bài học đã tính hoàn thành, tiến độ
+                khóa đã cập nhật 🎉
+              </p>
+            ) : (
+              <>
+                <p className="form-error">
+                  Chưa đạt — đúng {result.correct}/{result.total}, điểm {result.score}/100 (cần tối thiểu 80). Xem lại
+                  bài rồi thử lại nha!
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setResult(null)
+                    setAnswers({})
+                  }}
+                >
+                  Làm lại quiz
+                </button>
+              </>
+            )
           ) : (
             <button type="button" onClick={submitQuiz} disabled={!allAnswered || busy}>
               {busy ? 'Đang chấm…' : 'Nộp bài'}

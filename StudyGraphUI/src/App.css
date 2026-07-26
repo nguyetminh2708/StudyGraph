@@ -313,3 +313,49 @@
   border-radius: 8px;
   padding: 12px 18px;
 }
+
+.locked {
+  opacity: 0.6;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 720px;
+}
+
+.progress-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.progress-row:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+}
+
+.progress-row-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.progress-row-head b {
+  color: var(--text-h);
+  flex: 1;
+}
+
+.pct {
+  font-weight: 700;
+  color: var(--accent);
+}

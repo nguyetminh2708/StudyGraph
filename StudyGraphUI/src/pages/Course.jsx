@@ -94,13 +94,22 @@ export default function Course() {
       <section className="section">
         <h2>Bài học ({lessons.length})</h2>
         <ol className="lesson-list">
-          {lessons.map((l) => (
-            <li key={l.key}>
-              <Link to={`/lessons/${l.key}`}>{l.title}</Link>
-              {detail.completedLessonKeys.includes(l.key) && <span className="tick">✓</span>}
-            </li>
-          ))}
+          {lessons.map((l, i) => {
+            const done = detail.completedLessonKeys.includes(l.key)
+            const unlocked = i === 0 || detail.completedLessonKeys.includes(lessons[i - 1].key)
+            return (
+              <li key={l.key}>
+                {unlocked ? (
+                  <Link to={`/lessons/${l.key}`}>{l.title}</Link>
+                ) : (
+                  <span className="locked">🔒 {l.title}</span>
+                )}
+                {done && <span className="tick">✓</span>}
+              </li>
+            )
+          })}
         </ol>
+        <p className="muted">Học tuần tự: hoàn thành bài trước để mở bài sau — bài có quiz cần đạt tối thiểu 80%.</p>
       </section>
     </>
   )
