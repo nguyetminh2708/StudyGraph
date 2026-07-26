@@ -13,6 +13,9 @@ public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
     private readonly Random _rng = new(42);
     private static readonly DateTime Anchor = new(2026, 7, 1, 0, 0, 0, DateTimeKind.Utc);
 
+    private Dictionary<string, List<Lesson>> _lessonsByCourse = new();
+    private HashSet<string> _lessonHasQuiz = new();
+
     // 4 track gốc, mỗi track 3 khóa (Level 1→3) — đúng bản đồ prerequisite mục 3
     private static readonly (string Track, string Category, string[] Keys, string[] Titles)[] BaseTracks =
     {
@@ -69,6 +72,11 @@ public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
             }
         }
 
+        // Lookup 1 lần cho SF lớn — tránh quét tuyến tính Lessons/Quizzes theo từng user
+        _lessonsByCourse = data.Lessons.GroupBy(l => l.CourseKey)
+                                       .ToDictionary(g => g.Key, g => g.OrderBy(l => l.Order).ToList());
+        _lessonHasQuiz = data.Quizzes.Select(q => q.LessonKey).ToHashSet();
+
         // ---- 3. Users theo 3 cụm persona: 40% dân data, 40% dân web, 20% dân infra ----
         // Cụm "dân data" học track data + lác đác be; "dân web" học fe + be; "dân infra" học infra.
         var clusterPools = new Dictionary<string, List<List<Course>>>
@@ -117,8 +125,7 @@ public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
             var enrolledAt = Anchor.AddDays(-_rng.Next(10, 90));
             // % hoàn thành: người mới 30-70%, còn lại 30-100% (đủ user Progress=100 cho Q2)
             var lessonsDone = isFresh ? 1 + _rng.Next(3) : 1 + _rng.Next(5);
-            var courseLessons = data.Lessons.Where(l => l.CourseKey == course.Key)
-                                            .OrderBy(l => l.Order).Take(lessonsDone).ToList();
+            var courseLessons = _lessonsByCourse[course.Key].Take(lessonsDone).ToList();
 
             data.EnrolledIn.Add(new EnrolledInEdge
             {
@@ -130,13 +137,14 @@ public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
 
             foreach (var lesson in courseLessons)
             {
-                var hasQuiz = data.Quizzes.Any(q => q.LessonKey == lesson.Key);
+                var hasQuiz = _lessonHasQuiz.Contains(lesson.Key);
                 data.Completed.Add(new CompletedEdge
                 {
                     From = userId,
                     To = $"lessons/{lesson.Key}",
                     CompletedAt = enrolledAt.AddDays(_rng.Next(1, 30)).ToString("o"),
-                    Score = hasQuiz ? 60 + _rng.Next(41) : null
+                    // Rule nghiệp vụ: completed = quiz đã ĐẠT (>= 80%) → seed 80-100
+                    Score = hasQuiz ? 80 + _rng.Next(21) : null
                 });
             }
         }

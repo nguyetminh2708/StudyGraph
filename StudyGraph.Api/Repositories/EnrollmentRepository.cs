@@ -87,7 +87,27 @@ namespace StudyGraph.Api.Repositories
           RETURN NEW.Progress
         """;
 
-        private const string MyProgressAql = """
+        // Học tuần tự: bài N chỉ mở khi bài N-1 (cùng khóa) đã có edge completed.
+    // Edge completed của bài có quiz chỉ được tạo khi quiz đạt >= 80% (QuizService),
+    // nên check này đồng thời bao luôn rule "quiz phải đạt 80% mới qua bài tiếp theo".
+    private const string PreviousLessonCompletedAql = """
+        LET lesson = DOCUMENT(@lessonId)
+        LET prev = FIRST(
+          FOR l IN lessons
+            FILTER l.CourseKey == lesson.CourseKey AND l.Order == lesson.Order - 1
+            RETURN l
+        )
+        RETURN prev == null
+          ? true
+          : LENGTH(
+              FOR c IN completed
+                FILTER c._from == @userId AND c._to == prev._id
+                LIMIT 1
+                RETURN 1
+            ) > 0
+        """;
+
+    private const string MyProgressAql = """
         FOR e IN enrolled_in
           FILTER e._from == @userId
           LET c = DOCUMENT(e._to)
@@ -108,6 +128,22 @@ namespace StudyGraph.Api.Repositories
           FILTER l.CourseKey == @courseKey
           RETURN l._key
         """;
+
+        /// <summary>Bài trước (Order - 1) đã hoàn thành chưa? Bài đầu tiên luôn true.</summary>
+        public async Task<bool> PreviousLessonCompletedAsync(string userKey, string lessonKey)
+        {
+            var cursor = await client.Cursor.PostCursorAsync<bool>(
+                new PostCursorBody
+                {
+                    Query = PreviousLessonCompletedAql,
+                    BindVars = new Dictionary<string, object>
+                    {
+                        ["userId"] = $"users/{userKey}",
+                        ["lessonId"] = $"lessons/{lessonKey}"
+                    }
+                });
+            return cursor.Result.FirstOrDefault();
+        }
 
         public async Task<EnrolledInEdge> EnrollAsync(string userKey, string courseKey)
         {

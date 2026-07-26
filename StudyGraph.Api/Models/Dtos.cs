@@ -93,6 +93,7 @@
         public int Correct { get; set; }
         public int Total { get; set; }
         public int Score { get; set; }                          // 0..100, lưu vào edge completed
+        public bool Passed { get; set; }                        // Score >= 80 mới đạt — mở bài tiếp theo
     }
 
     // Đăng nhập tối giản:

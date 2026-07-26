@@ -5,6 +5,9 @@ namespace StudyGraph.Api.Services;
 
 public class QuizService(QuizRepository quizzes, EnrollmentRepository enrollments)
 {
+    /// <summary>Ngưỡng đạt: phải đúng từ 80% trở lên mới được tính hoàn thành bài học.</summary>
+    public const int PassScore = 80;
+
     /// <summary>Lấy đề — GIẤU AnswerIndex trước khi trả về client.</summary>
     public async Task<QuizView?> GetViewAsync(string quizKey)
     {
@@ -39,8 +42,13 @@ public class QuizService(QuizRepository quizzes, EnrollmentRepository enrollment
         }
 
         var score = total == 0 ? 0 : (int)Math.Round(100.0 * correct / total);
-        await enrollments.CompleteLessonAsync(userKey, quiz.LessonKey, score);
+        var passed = score >= PassScore;
 
-        return new QuizResult { Correct = correct, Total = total, Score = score };
+        // Chỉ khi ĐẠT mới tạo edge completed (mở bài tiếp theo + cập nhật Progress).
+        // Chưa đạt: trả kết quả để UI báo "làm lại", không ghi nhận hoàn thành.
+        if (passed)
+            await enrollments.CompleteLessonAsync(userKey, quiz.LessonKey, score);
+
+        return new QuizResult { Correct = correct, Total = total, Score = score, Passed = passed };
     }
 }

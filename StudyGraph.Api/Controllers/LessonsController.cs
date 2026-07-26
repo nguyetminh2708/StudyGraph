@@ -37,6 +37,15 @@ namespace StudyGraph.Api.Controllers
             var user = HttpContext.CurrentUser();
             if (user is null) return Unauthorized(new { Error = "Thiếu hoặc sai header X-User-Key" });
 
+            // Học tuần tự: bài trước phải hoàn thành rồi mới được học bài này
+            if (!await enrollments.PreviousLessonCompletedAsync(user.Key, key))
+                return Conflict(new { Error = "Bạn cần hoàn thành bài học trước đó trước khi qua bài này" });
+
+            // Bài có quiz thì không hoàn thành tay được — phải nộp quiz đạt >= 80%
+            var quiz = await quizzes.GetByLessonAsync(key);
+            if (quiz is not null)
+                return Conflict(new { Error = $"Bài này có quiz — nộp quiz đạt tối thiểu {Services.QuizService.PassScore}% để hoàn thành" });
+
             var progress = await enrollments.CompleteLessonAsync(user.Key, key);
             if (progress is null)
                 return Conflict(new { Error = "Bạn chưa ghi danh khóa chứa bài học này" });

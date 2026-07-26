@@ -7,7 +7,9 @@ namespace StudyGraph.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class QuizzesController(QuizService quizService) : ControllerBase
+    public class QuizzesController(
+        QuizService quizService,
+        StudyGraph.Api.Repositories.EnrollmentRepository enrollments) : ControllerBase
     {
         /// <summary>GET /api/quizzes/{key} — lấy đề (giấu AnswerIndex).</summary>
         [HttpGet("{key}")]
@@ -23,6 +25,12 @@ namespace StudyGraph.Api.Controllers
         {
             var user = HttpContext.CurrentUser();
             if (user is null) return Unauthorized(new { Error = "Thiếu hoặc sai header X-User-Key" });
+
+            // Không cho nộp quiz của bài chưa mở (bài trước chưa hoàn thành)
+            var view = await quizService.GetViewAsync(key);
+            if (view is null) return NotFound();
+            if (!await enrollments.PreviousLessonCompletedAsync(user.Key, view.LessonKey))
+                return Conflict(new { Error = "Bạn cần hoàn thành bài học trước đó trước khi làm quiz này" });
 
             var result = await quizService.SubmitAsync(user.Key, key, submission);
             return result is null ? NotFound() : Ok(result);
