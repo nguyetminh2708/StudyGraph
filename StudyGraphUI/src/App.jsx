@@ -3,6 +3,7 @@ import { isLoggedIn } from './api'
 import Layout from './components/Layout'
 import Course from './pages/Course'
 import Home from './pages/Home'
+import Lesson from './pages/Lesson'
 import Login from './pages/Login'
 import './App.css'
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/courses/:key" element={<Course />} />
+            <Route path="/lessons/:key" element={<Lesson />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />

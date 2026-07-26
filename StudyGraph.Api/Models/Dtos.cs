@@ -38,6 +38,7 @@
     {
         public Course Course { get; set; } = default!;
         public List<Lesson> Lessons { get; set; } = new();     // sort theo Order
+        public List<string> CompletedLessonKeys { get; set; } = new();  // bài user hiện tại đã học xong
     }
 
     public class CourseUpsertRequest

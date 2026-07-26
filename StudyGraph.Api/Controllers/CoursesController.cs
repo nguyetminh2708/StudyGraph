@@ -24,17 +24,21 @@ namespace StudyGraph.Api.Controllers
             return Ok(await courses.ListAsync(category, level, page, pageSize));
         }
 
-        /// <summary>GET /api/courses/{key} — chi tiết khóa + lessons (sort Order).</summary>
+        /// <summary>GET /api/courses/{key} — chi tiết khóa + lessons (sort Order) + bài đã học xong.</summary>
         [HttpGet("{key}")]
         public async Task<ActionResult<CourseDetailDto>> Get(string key)
         {
             var course = await courses.GetAsync(key);
             if (course is null) return NotFound();
 
+            var user = HttpContext.CurrentUser();
             return Ok(new CourseDetailDto
             {
                 Course = course,
-                Lessons = await courses.GetLessonsAsync(key)
+                Lessons = await courses.GetLessonsAsync(key),
+                CompletedLessonKeys = user is null
+                    ? new List<string>()
+                    : await enrollments.GetCompletedLessonKeysAsync(user.Key, key)
             });
         }
 

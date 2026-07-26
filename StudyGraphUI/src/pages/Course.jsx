@@ -38,8 +38,8 @@ export default function Course() {
     setEnrolling(true)
     setMessage('')
     try {
-      await post(`/api/courses/${key}/enroll`)
-      setEnrollment({ course: detail.course, progress: 0, enrolledAt: new Date().toISOString() })
+      const edge = await post(`/api/courses/${key}/enroll`)
+      setEnrollment({ course: detail.course, progress: edge.progress ?? 0, enrolledAt: edge.enrolledAt })
       setMessage('Ghi danh thành công! Bắt đầu học thôi 🎉')
     } catch (err) {
       setMessage(err.message)
@@ -97,6 +97,7 @@ export default function Course() {
           {lessons.map((l) => (
             <li key={l.key}>
               <Link to={`/lessons/${l.key}`}>{l.title}</Link>
+              {detail.completedLessonKeys.includes(l.key) && <span className="tick">✓</span>}
             </li>
           ))}
         </ol>

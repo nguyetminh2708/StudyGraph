@@ -6,8 +6,30 @@ namespace StudyGraph.Api.Controllers
 {
     [ApiController]
     [Route("api/lessons")]
-    public class LessonsController(EnrollmentRepository enrollments) : ControllerBase
+    public class LessonsController(
+        EnrollmentRepository enrollments,
+        CourseRepository courses,
+        QuizRepository quizzes) : ControllerBase
     {
+        /// <summary>GET /api/lessons/{key} — nội dung bài + key quiz (nếu có) + trạng thái hoàn thành.</summary>
+        [HttpGet("{key}")]
+        public async Task<IActionResult> Get(string key)
+        {
+            var lesson = await courses.GetLessonAsync(key);
+            if (lesson is null) return NotFound();
+
+            var quiz = await quizzes.GetByLessonAsync(key);
+            var user = HttpContext.CurrentUser();
+            var completedEdge = user is null ? null : await enrollments.GetCompletedEdgeAsync(user.Key, key);
+            return Ok(new
+            {
+                Lesson = lesson,
+                QuizKey = quiz?.Key,
+                Completed = completedEdge is not null,
+                completedEdge?.Score
+            });
+        }
+
         /// <summary>POST /api/lessons/{key}/complete — hoàn thành bài + cập nhật Progress.</summary>
         [HttpPost("{key}/complete")]
         public async Task<IActionResult> Complete(string key)

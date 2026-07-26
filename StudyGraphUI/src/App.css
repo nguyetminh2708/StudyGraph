@@ -281,3 +281,35 @@
   padding: 4px 0;
   cursor: pointer;
 }
+
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.lesson-nav-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.tick {
+  color: #16a34a;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.next-cta {
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 18px;
+}
