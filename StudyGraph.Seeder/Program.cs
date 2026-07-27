@@ -5,14 +5,17 @@ using StudyGraph.Seeder;
 
 // ---- Tham số: scale factor (mục 7) + tùy chọn xuất JSON cho SqlImporter ----
 //   dotnet run                          -> SF-nhỏ  (50 users / 12 courses — demo app)
-//   dotnet run -- --sf vua              -> SF-vừa  (5.000 users / 200 courses)
-//   dotnet run -- --sf lon              -> SF-lớn  (50.000 users / 1.000 courses)
+//   dotnet run -- --sf vua              -> SF-vừa  (5.000 users / 198 courses)
+//   dotnet run -- --sf lon              -> SF-lớn  (50.000 users / 999 courses)
 //   dotnet run -- --json                -> ghi thêm seed-output/*.json
 var sf = args.SkipWhile(a => a != "--sf").Skip(1).FirstOrDefault() ?? "nho";
 var exportJson = args.Contains("--json");
 
 var (users, courses) = sf switch
 {
+    // Tham số thứ hai là SỐ KHÓA MONG MUỐN. BuildTracks tính
+    // trackCount = max(4, mongMuon / 3) rồi sinh đúng 3 khóa mỗi track, nên số
+    // khóa thực tế bị làm tròn xuống bội số của 3: 200 -> 198, 1.000 -> 999.
     "vua" => (5_000, 200),
     "lon" => (50_000, 1_000),
     _ => (50, 12)
@@ -27,9 +30,15 @@ if (exportJson)
     Console.WriteLine("Đã ghi seed-output/*.json (cho StudyGraph.SqlImporter).");
 }
 
-// ---- Kết nối (khớp mục 4 artifact) ----
+// ---- Kết nối ----
+// Đọc từ StudyGraph.Api/appsettings.json để Seeder và API dùng CÙNG một cấu
+// hình. Ghi đè được bằng tham số dòng lệnh:
+//   dotnet run -- --url http://localhost:8529 --db studygraph --user root --pass ...
+var cfg = ArangoConfig.Load(args);
+Console.WriteLine($"Kết nối: {cfg.Url} / {cfg.Database} (user {cfg.User})");
+
 using var transport = HttpApiTransport.UsingBasicAuth(
-    new Uri("http://localhost:8529"), "studygraph", "root", "Study2026");
+    new Uri(cfg.Url), cfg.Database, cfg.User, cfg.Password);
 using var client = new ArangoDBClient(transport);
 
 // ---- 1. Xóa sạch để chạy lại được nhiều lần (idempotent) — edge trước, document sau ----

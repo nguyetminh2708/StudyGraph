@@ -1,4 +1,11 @@
 <Solution>
   <Project Path="StudyGraph.Api/StudyGraph.Api.csproj" />
   <Project Path="StudyGraph.Seeder/StudyGraph.Seeder.csproj" />
+  <Project Path="StudyGraph.SqlImporter/StudyGraph.SqlImporter.csproj" />
+  <Project Path="StudyGraph.Benchmark/StudyGraph.Benchmark.csproj" />
+  <Folder Name="/sql-and-schema/">
+    <File Path="schema/01_create_schema.js" />
+    <File Path="sql/01_schema.sql" />
+    <File Path="sql/02_queries_Q1_Q2_Q3.sql" />
+  </Folder>
 </Solution>

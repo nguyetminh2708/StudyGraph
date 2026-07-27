@@ -11,7 +11,9 @@ namespace StudyGraph.Api.Repositories;
 public class RecommendationRepository(IArangoDBClient client)
 {
     // Q1 — Gợi ý cộng tác: bạn học chung khóa đang học gì
-    private const string CollaborativeAql = """
+    // public để StudyGraph.Benchmark đo ĐÚNG câu truy vấn đang chạy trong API,
+    // thay vì một bản sao có thể lệch đi theo thời gian.
+    public const string CollaborativeAql = """
         // 2 bước ANY qua enrolled_in: tôi → khóa của tôi → người học chung
         // rồi OUTBOUND lấy khóa của họ mà tôi chưa ghi danh
         FOR nguoiChungKhoa IN 2..2 ANY @myUserId enrolled_in
@@ -30,7 +32,7 @@ public class RecommendationRepository(IArangoDBClient client)
         """;
 
     // Q2 — Gợi ý theo lộ trình: khóa đã "mở khóa"
-    private const string UnlockedAql = """
+    public const string UnlockedAql = """
         // Khóa tôi chưa ghi danh, mà MỌI điều kiện tiên quyết đều nằm trong
         // danh sách khóa tôi đã hoàn thành
         FOR khoa IN courses

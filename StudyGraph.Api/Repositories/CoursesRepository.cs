@@ -39,7 +39,8 @@ namespace StudyGraph.Api.Repositories
 
         // Q3 — Learning path: cần học gì trước khi vào 1 khóa nâng cao (nguyên văn mục 5)
         // Toàn bộ chuỗi điều kiện (đệ quy tới 5 tầng), kèm độ sâu để vẽ lộ trình
-        private const string LearningPathAql = """        
+        // public để StudyGraph.Benchmark đo đúng câu truy vấn đang chạy trong API.
+        public const string LearningPathAql = """
         FOR v, e, p IN 1..5 INBOUND @courseId prerequisite_of
           OPTIONS { uniqueVertices: "global", order: "bfs" }
           RETURN DISTINCT { Course: v, Depth: LENGTH(p.edges) }
