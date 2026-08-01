@@ -19,6 +19,7 @@ export default function Home() {
   }
 
   useEffect(() => {
+    if (isAdmin()) return undefined
     let cancelled = false
     get('/api/user/recommendations')
       .then((r) => {
@@ -53,8 +54,8 @@ export default function Home() {
       <div className="page-head">
         <h1>Khóa học</h1>
         {isAdmin() && (
-          <Link className="btn-like" to="/admin/courses/new">
-            + Thêm khóa học
+          <Link className="btn-like" to="/admin">
+            Bảng quản trị
           </Link>
         )}
       </div>

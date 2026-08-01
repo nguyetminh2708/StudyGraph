@@ -48,7 +48,9 @@ namespace StudyGraph.Api.Controllers
         {
             var user = HttpContext.CurrentUser();
             if (user is null) return Unauthorized(new { Error = "Thiếu hoặc sai header X-User-Key" });
-            if (user.Role != "admin") return Forbid();
+            if (user.Role != "admin")
+                return StatusCode(StatusCodes.Status403Forbidden,
+                    new { Error = "Chức năng này chỉ dành cho admin" });
 
             var key = string.IsNullOrWhiteSpace(req.Key)
                 ? $"c-{Guid.NewGuid():N}"[..12]
@@ -63,7 +65,9 @@ namespace StudyGraph.Api.Controllers
         {
             var user = HttpContext.CurrentUser();
             if (user is null) return Unauthorized(new { Error = "Thiếu hoặc sai header X-User-Key" });
-            if (user.Role != "admin") return Forbid();
+            if (user.Role != "admin")
+                return StatusCode(StatusCodes.Status403Forbidden,
+                    new { Error = "Chức năng này chỉ dành cho admin" });
 
             return Ok(await courses.UpsertAsync(key, req));
         }
@@ -74,7 +78,9 @@ namespace StudyGraph.Api.Controllers
         {
             var user = HttpContext.CurrentUser();
             if (user is null) return Unauthorized(new { Error = "Thiếu hoặc sai header X-User-Key" });
-            if (user.Role != "admin") return Forbid();
+            if (user.Role != "admin")
+                return StatusCode(StatusCodes.Status403Forbidden,
+                    new { Error = "Chức năng này chỉ dành cho admin" });
 
             var course = await courses.GetAsync(key);
             if (course is null) return NotFound();

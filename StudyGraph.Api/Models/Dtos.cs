@@ -34,6 +34,29 @@
         public long Total { get; set; }
     }
 
+    // ---------- Thống kê cho trang quản trị ----------
+    public class AdminTotals
+    {
+        public long Courses { get; set; }
+        public long Students { get; set; }
+        public long Enrollments { get; set; }
+        public long Completions { get; set; }
+    }
+
+    public class CourseStatsItem
+    {
+        public Course Course { get; set; } = default!;
+        public int Students { get; set; }
+        public double? AvgProgress { get; set; }
+        public double? AvgStars { get; set; }
+    }
+
+    public class AdminStatsDto
+    {
+        public AdminTotals Totals { get; set; } = default!;
+        public List<CourseStatsItem> CourseStats { get; set; } = new();
+    }
+
     public class CourseDetailDto
     {
         public Course Course { get; set; } = default!;

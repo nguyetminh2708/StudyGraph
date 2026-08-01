@@ -13,8 +13,8 @@ export default function Login() {
     setError('')
     setLoading(true)
     try {
-      await login(email)
-      navigate('/')
+      const user = await login(email)
+      navigate(user.role === 'admin' ? '/admin' : '/')
     } catch (err) {
       setError(err.message)
     } finally {

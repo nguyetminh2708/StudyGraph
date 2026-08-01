@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import { isLoggedIn } from './api'
 import Layout from './components/Layout'
+import Admin from './pages/Admin'
 import Course from './pages/Course'
 import CourseForm from './pages/CourseForm'
 import Home from './pages/Home'
@@ -20,6 +21,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/courses/:key" element={<Course />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/admin/courses/new" element={<CourseForm />} />
             <Route path="/admin/courses/:key/edit" element={<CourseForm />} />
             <Route path="/lessons/:key" element={<Lesson />} />

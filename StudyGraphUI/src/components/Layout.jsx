@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom'
-import { logout, userName } from '../api'
+import { isAdmin, logout, userName } from '../api'
 
 export default function Layout() {
   const navigate = useNavigate()
@@ -19,7 +19,7 @@ export default function Layout() {
           <NavLink to="/" end>
             Khóa học
           </NavLink>
-          <NavLink to="/me">Tiến độ</NavLink>
+          {isAdmin() ? <NavLink to="/admin">Quản trị</NavLink> : <NavLink to="/me">Tiến độ</NavLink>}
         </nav>
         <div className="userbox">
           <span>{userName()}</span>

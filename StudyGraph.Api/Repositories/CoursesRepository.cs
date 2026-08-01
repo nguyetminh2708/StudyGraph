@@ -148,6 +148,33 @@ namespace StudyGraph.Api.Repositories
             return cursor.Result.ToList();
         }
 
+        // Thống kê quản trị — bản AQL của GROUP BY/AVG bên SQL (đối chiếu chương thực nghiệm)
+        private const string AdminStatsAql = """
+            RETURN {
+              Totals: {
+                Courses: LENGTH(courses),
+                Students: LENGTH(FOR u IN users FILTER u.Role == "student" RETURN 1),
+                Enrollments: LENGTH(enrolled_in),
+                Completions: LENGTH(completed)
+              },
+              CourseStats: (
+                FOR c IN courses
+                  LET hocVien = LENGTH(FOR e IN enrolled_in FILTER e._to == c._id RETURN 1)
+                  LET avgProgress = AVERAGE(FOR e IN enrolled_in FILTER e._to == c._id RETURN e.Progress)
+                  LET avgStars = AVERAGE(FOR r IN rated FILTER r._to == c._id RETURN r.Stars)
+                  SORT hocVien DESC, c.Title
+                  RETURN { Course: c, Students: hocVien, AvgProgress: avgProgress, AvgStars: avgStars }
+              )
+            }
+            """;
+
+        public async Task<AdminStatsDto> GetAdminStatsAsync()
+        {
+            var cursor = await client.Cursor.PostCursorAsync<AdminStatsDto>(
+                new PostCursorBody { Query = AdminStatsAql });
+            return cursor.Result.First();
+        }
+
         public async Task<string?> DeleteAsync(string key)
         {
             var cursor = await client.Cursor.PostCursorAsync<string>(
