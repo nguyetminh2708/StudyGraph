@@ -16,9 +16,9 @@ namespace StudyGraph.Api.Controllers
     UserRepository users) : ControllerBase
     {
         /// <summary>
-        /// POST /api/user/login — đăng nhập tối giản cho student:
-        /// nhập Email, trả về UserKey để client gắn vào header X-User-Key
-        /// cho các request sau. Không password/JWT — ghi vào "hướng phát triển".
+        /// POST /api/user/login — đăng nhập tối giản (student lẫn admin):
+        /// nhập Email, trả về UserKey + Role để client gắn header X-User-Key
+        /// và bật/tắt chức năng quản trị. Không password/JWT — ghi vào "hướng phát triển".
         /// </summary>
         [HttpPost("login")]
         public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request)
@@ -29,10 +29,6 @@ namespace StudyGraph.Api.Controllers
             var user = await users.GetByEmailAsync(request.Email.Trim());
             if (user is null)
                 return Unauthorized(new { Error = "Email không tồn tại trong hệ thống" });
-
-            if (user.Role != "student")
-                return StatusCode(StatusCodes.Status403Forbidden,
-                    new { Error = "Endpoint này chỉ dành cho student" });
 
             return Ok(new LoginResponse
             {

@@ -359,3 +359,69 @@
   font-weight: 700;
   color: var(--accent);
 }
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-like {
+  display: inline-block;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+button.danger {
+  border-color: rgba(220, 38, 38, 0.5);
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626;
+}
+
+button.ghost {
+  border-color: var(--border);
+  background: none;
+  color: var(--text);
+}
+
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 560px;
+}
+
+.course-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.course-form textarea,
+.course-form select {
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { get } from '../api'
+import { Link } from 'react-router-dom'
+import { get, isAdmin } from '../api'
 import CourseCard from '../components/CourseCard'
 
 const CATEGORIES = ['Tất cả', 'Database', 'Backend', 'Frontend', 'DevOps']
@@ -49,7 +50,14 @@ export default function Home() {
 
   return (
     <>
-      <h1>Khóa học</h1>
+      <div className="page-head">
+        <h1>Khóa học</h1>
+        {isAdmin() && (
+          <Link className="btn-like" to="/admin/courses/new">
+            + Thêm khóa học
+          </Link>
+        )}
+      </div>
 
       {recs.length > 0 && (
         <section className="section">

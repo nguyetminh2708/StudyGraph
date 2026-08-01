@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { get, post } from '../api'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { del, get, isAdmin, post } from '../api'
 
 const LEVELS = { 1: 'Cơ bản', 2: 'Trung cấp', 3: 'Nâng cao' }
 
 export default function Course() {
   const { key } = useParams()
+  const navigate = useNavigate()
   const [detail, setDetail] = useState(null)
   const [path, setPath] = useState([])
   const [enrollment, setEnrollment] = useState(null)
@@ -48,6 +49,23 @@ export default function Course() {
     }
   }
 
+  const removeCourse = async () => {
+    if (
+      !window.confirm(
+        `Xóa khóa "${detail.course.title}"? Toàn bộ bài học, quiz và dữ liệu học liên quan sẽ bị xóa vĩnh viễn.`
+      )
+    )
+      return
+    setEnrolling(true)
+    try {
+      await del(`/api/courses/${key}`)
+      navigate('/')
+    } catch (err) {
+      setMessage(err.message)
+      setEnrolling(false)
+    }
+  }
+
   if (error) return <p className="form-error">{error}</p>
   if (!loaded) return <p className="muted">Đang tải…</p>
 
@@ -63,7 +81,18 @@ export default function Course() {
       {course.description && <p>{course.description}</p>}
       {course.tags?.length > 0 && <p className="muted">Tags: {course.tags.join(', ')}</p>}
 
-      {enrollment ? (
+      {isAdmin() && (
+        <div className="admin-actions">
+          <Link className="btn-like" to={`/admin/courses/${key}/edit`}>
+            Sửa khóa học
+          </Link>
+          <button type="button" className="danger" onClick={removeCourse} disabled={enrolling}>
+            {enrolling ? 'Đang xóa…' : 'Xóa khóa học'}
+          </button>
+        </div>
+      )}
+
+      {isAdmin() ? null : enrollment ? (
         <div className="enroll-status">
           <span>Đã ghi danh — tiến độ {enrollment.progress}%</span>
           <div className="progress-track">

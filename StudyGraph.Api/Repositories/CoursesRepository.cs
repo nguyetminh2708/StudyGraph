@@ -54,6 +54,22 @@ namespace StudyGraph.Api.Repositories
             RETURN NEW
             """;
 
+        // Xóa khóa học + toàn bộ dữ liệu dính tới nó (lessons, quizzes, edges) —
+        // mỗi collection 1 subquery vì AQL cấm sửa cùng collection 2 lần trong 1 query
+        private const string DeleteCascadeAql = """
+            LET courseId = CONCAT("courses/", @key)
+            LET lessonKeys = (FOR l IN lessons FILTER l.CourseKey == @key RETURN l._key)
+            LET lessonIds = (FOR k IN lessonKeys RETURN CONCAT("lessons/", k))
+            LET remQuizzes = (FOR q IN quizzes FILTER q.LessonKey IN lessonKeys REMOVE q IN quizzes RETURN 1)
+            LET remCompleted = (FOR c IN completed FILTER c._to IN lessonIds REMOVE c IN completed RETURN 1)
+            LET remEnrolled = (FOR e IN enrolled_in FILTER e._to == courseId REMOVE e IN enrolled_in RETURN 1)
+            LET remRated = (FOR r IN rated FILTER r._to == courseId REMOVE r IN rated RETURN 1)
+            LET remPrereq = (FOR p IN prerequisite_of FILTER p._from == courseId OR p._to == courseId REMOVE p IN prerequisite_of RETURN 1)
+            LET remLessons = (FOR l IN lessons FILTER l.CourseKey == @key REMOVE l IN lessons RETURN 1)
+            REMOVE @key IN courses
+            RETURN OLD._key
+            """;
+
         private class ListPage
         {
             public List<Course> Items { get; set; } = new();
@@ -130,6 +146,17 @@ namespace StudyGraph.Api.Repositories
                     }
                 });
             return cursor.Result.ToList();
+        }
+
+        public async Task<string?> DeleteAsync(string key)
+        {
+            var cursor = await client.Cursor.PostCursorAsync<string>(
+                new PostCursorBody
+                {
+                    Query = DeleteCascadeAql,
+                    BindVars = new Dictionary<string, object> { ["key"] = key }
+                });
+            return cursor.Result.FirstOrDefault();
         }
 
         public async Task<Course> UpsertAsync(string key, CourseUpsertRequest req)

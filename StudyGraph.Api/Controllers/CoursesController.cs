@@ -68,6 +68,21 @@ namespace StudyGraph.Api.Controllers
             return Ok(await courses.UpsertAsync(key, req));
         }
 
+        /// <summary>DELETE /api/courses/{key} — xóa khóa + lessons/quizzes/edges liên quan (admin).</summary>
+        [HttpDelete("{key}")]
+        public async Task<IActionResult> Delete(string key)
+        {
+            var user = HttpContext.CurrentUser();
+            if (user is null) return Unauthorized(new { Error = "Thiếu hoặc sai header X-User-Key" });
+            if (user.Role != "admin") return Forbid();
+
+            var course = await courses.GetAsync(key);
+            if (course is null) return NotFound();
+
+            await courses.DeleteAsync(key);
+            return NoContent();
+        }
+
         /// <summary>POST /api/courses/{key}/enroll — ghi danh (edge enrolled_in, chặn trùng).</summary>
         [HttpPost("{key}/enroll")]
         public async Task<IActionResult> Enroll(string key)

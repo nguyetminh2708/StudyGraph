@@ -86,6 +86,16 @@ public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
             ["infra"]= tracks.Where(t => t.Track == "infra").Select(t => t.Courses).ToList(),
         };
 
+        // Admin riêng, không tham gia học — quản trị khóa học qua UI
+        data.Users.Add(new User
+        {
+            Key = "admin",
+            Name = "Quản trị viên",
+            Email = "admin@studygraph.dev",
+            Role = "admin",
+            CreatedAt = Anchor.AddDays(-200).ToString("o")
+        });
+
         for (var i = 1; i <= scaleUsers; i++)
         {
             var cluster = i <= scaleUsers * 0.4 ? "data"
@@ -95,7 +105,7 @@ public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
                 Key = $"u{i:000}",
                 Name = $"{Ho[_rng.Next(Ho.Length)]} {Ten[_rng.Next(Ten.Length)]}",
                 Email = $"user{i:000}@studygraph.dev",
-                Role = i == 1 ? "admin" : "student",
+                Role = "student",
                 CreatedAt = Anchor.AddDays(-_rng.Next(90, 180)).ToString("o")
             };
             data.Users.Add(user);
