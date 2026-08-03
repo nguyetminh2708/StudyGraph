@@ -1,12 +1,12 @@
-using StudyGraph.Api.Models;
+﻿using StudyGraph.Api.Models;
 
 namespace StudyGraph.Seeder;
 
 /// <summary>
-/// Sinh dữ liệu mẫu theo chiến lược mục 4 artifact: gợi ý cộng tác chỉ hay khi
+/// Sinh dữ liệu mẫu theo chiến lược: gợi ý cộng tác chỉ hay khi
 /// dữ liệu CÓ CỤM — nên không random đều mà tạo 3 persona rõ rệt.
 /// Random(42) cố định + ngày neo cố định → chạy lại bao nhiêu lần cũng ra đúng
-/// một bộ số liệu (tái lập được cho benchmark tuần 4).
+/// một bộ số liệu (tái lập được để phục vụ phần đo hiệu năng).
 /// </summary>
 public class DataGenerator(int scaleUsers = 50, int scaleCourses = 12)
 {

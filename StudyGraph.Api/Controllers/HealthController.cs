@@ -10,7 +10,7 @@ namespace StudyGraph.Api.Controllers
     [ApiController]
     public class HealthController(IArangoDBClient client) : ControllerBase
     {
-        /// <summary>GET /api/health — trả version ArangoDB, chứng minh API nối được DB (tuần 1).</summary>
+        /// <summary>GET /api/health — trả version ArangoDB, chứng minh API nối được DB.</summary>
         [HttpGet]
         public async Task<IActionResult> Get()
         {

@@ -1,9 +1,9 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace StudyGraph.Seeder;
 
 /// <summary>
-/// Ghi bộ dữ liệu ra seed-output/*.json — StudyGraph.SqlImporter (tuần 4) đọc đúng
+/// Ghi bộ dữ liệu ra seed-output/*.json — StudyGraph.SqlImporter đọc đúng
 /// bộ JSON này đổ vào SQL Server bằng SqlBulkCopy → 2 hệ CÙNG một bộ dữ liệu (mục 7).
 /// </summary>
 public static class JsonExporter

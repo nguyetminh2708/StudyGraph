@@ -1,0 +1,25 @@
+# Kết quả build của .NET
+# (đã có ở .gitignore gốc, lặp lại để project này tự đứng độc lập được)
+bin/
+obj/
+
+# Dữ liệu do bộ sinh xuất ra.
+# Chạy `dotnet run -- --sf vua` là sinh lại được, và ở quy mô lớn thư mục này
+# lên tới hàng chục MB nên không đưa vào lịch sử repo.
+# Lưu ý: bộ mẫu nhỏ dùng cho ví dụ trong tiểu luận nằm ở /seed-output ngoài
+# thư mục gốc và VẪN được theo dõi — chỗ đó không bị quy tắc này ảnh hưởng.
+seed-output/
+*.jsonl
+
+# Cấu hình kết nối riêng của từng máy (URL, user, mật khẩu ArangoDB).
+# Truyền qua tham số dòng lệnh --url/--db/--user/--pass thay vì commit lên.
+appsettings.Local.json
+appsettings.*.local.json
+.env
+.env.*
+secrets.json
+
+# Nhật ký và file tạm khi chạy seeder
+*.log
+seed-*.txt
+*.tmp

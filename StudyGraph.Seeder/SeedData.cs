@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using StudyGraph.Api.Models;
 
 namespace StudyGraph.Seeder;
@@ -11,7 +11,7 @@ public class PrerequisiteOfEdge
 }
 
 /// <summary>
-/// Toàn bộ dữ liệu sinh ra — tách khỏi phần ghi DB để tuần 4
+/// Toàn bộ dữ liệu sinh ra — tách khỏi phần ghi DB để
 /// StudyGraph.SqlImporter dùng lại ĐÚNG bộ dữ liệu này đổ vào SQL Server (mục 7).
 /// </summary>
 public class SeedData
