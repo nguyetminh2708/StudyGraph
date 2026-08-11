@@ -111,7 +111,9 @@ export default function Lesson() {
           <button type="button" onClick={() => setReadDone(true)}>
             Hoàn thành bài học
           </button>
-          <p className="muted">Bài này có quiz — hoàn thành phần đọc trước, sau đó làm quiz đạt tối thiểu 80% để chốt.</p>
+          <p className="muted">
+            Bài này có quiz — hoàn thành phần đọc trước, sau đó làm quiz đạt tối thiểu 80% để chốt.
+          </p>
         </section>
       )}
 
