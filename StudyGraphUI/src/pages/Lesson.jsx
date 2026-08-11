@@ -13,6 +13,7 @@ export default function Lesson() {
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
+  const [readDone, setReadDone] = useState(false)
 
   const loaded = detail?.lesson.key === key
 
@@ -31,6 +32,7 @@ export default function Lesson() {
         setAnswers({})
         setResult(null)
         setProgress(null)
+        setReadDone(Boolean(d.completed))
         setError('')
         setMessage('')
       })
@@ -104,7 +106,16 @@ export default function Lesson() {
 
       <p className="lesson-content">{lesson.content}</p>
 
-      {quiz ? (
+      {quiz && !readDone && (
+        <section className="section">
+          <button type="button" onClick={() => setReadDone(true)}>
+            Hoàn thành bài học
+          </button>
+          <p className="muted">Bài này có quiz — hoàn thành phần đọc trước, sau đó làm quiz đạt tối thiểu 80% để chốt.</p>
+        </section>
+      )}
+
+      {quiz && readDone ? (
         <section className="section">
           <h2>Quiz ({quiz.questions.length} câu)</h2>
           {quiz.questions.map((q, qi) => (
@@ -154,7 +165,7 @@ export default function Lesson() {
             </button>
           )}
         </section>
-      ) : (
+      ) : quiz ? null : (
         <section className="section">
           {progress != null ? (
             <p className="form-success">Đã hoàn thành bài học — tiến độ khóa: {progress}% 🎉</p>
