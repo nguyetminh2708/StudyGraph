@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { get, post } from '../api'
 
 export default function Lesson() {
   const { key } = useParams()
+  const navigate = useNavigate()
   const [detail, setDetail] = useState(null)
   const [quiz, setQuiz] = useState(null)
   const [siblings, setSiblings] = useState([])
   const [answers, setAnswers] = useState({})
   const [result, setResult] = useState(null)
-  const [progress, setProgress] = useState(null)
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
-  const [readDone, setReadDone] = useState(false)
+  const [showQuiz, setShowQuiz] = useState(false)
 
   const loaded = detail?.lesson.key === key
 
@@ -31,8 +31,7 @@ export default function Lesson() {
         setSiblings(course.lessons)
         setAnswers({})
         setResult(null)
-        setProgress(null)
-        setReadDone(Boolean(d.completed))
+        setShowQuiz(false) // mở bài học luôn hiển thị nút "Hoàn thành bài học" trước, kể cả bài đã hoàn thành
         setError('')
         setMessage('')
       })
@@ -57,12 +56,22 @@ export default function Lesson() {
     }
   }
 
+  // Nhấn "Hoàn thành bài học":
+  // - bài CÓ quiz  → mở quiz (phải đạt >= 80% mới được tính hoàn thành, backend xử lý)
+  // - bài KHÔNG quiz → gọi API complete rồi chuyển thẳng sang bài tiếp theo
+  //   (bài cuối thì quay về trang khóa học để xem tiến độ)
   const completeLesson = async () => {
-    setBusy(true)
     setMessage('')
+    if (quiz) {
+      setShowQuiz(true)
+      return
+    }
+    setBusy(true)
     try {
-      const r = await post(`/api/lessons/${key}/complete`)
-      setProgress(r.courseProgress)
+      await post(`/api/lessons/${key}/complete`)
+      const idx = siblings.findIndex((l) => l.key === key)
+      const nextLesson = idx >= 0 && idx < siblings.length - 1 ? siblings[idx + 1] : null
+      navigate(nextLesson ? `/lessons/${nextLesson.key}` : `/courses/${detail.lesson.courseKey}`)
     } catch (err) {
       setMessage(err.message)
     } finally {
@@ -77,7 +86,7 @@ export default function Lesson() {
   const idx = siblings.findIndex((l) => l.key === key)
   const prev = idx > 0 ? siblings[idx - 1] : null
   const next = idx >= 0 && idx < siblings.length - 1 ? siblings[idx + 1] : null
-  const justDone = result?.passed || progress != null
+  const justDone = result?.passed === true
   const allAnswered = quiz != null && quiz.questions.every((_, i) => answers[i] !== undefined)
 
   return (
@@ -93,9 +102,8 @@ export default function Lesson() {
         </span>
       </div>
 
-      <h1>
-        Bài {lesson.order}: {lesson.title}
-      </h1>
+      {/* Dữ liệu seed có title dạng "Bài 3: SQL căn bản" — chỉ thêm prefix khi title chưa có sẵn */}
+      <h1>{/^bài\s*\d+/i.test(lesson.title) ? lesson.title : `Bài ${lesson.order}: ${lesson.title}`}</h1>
 
       {detail.completed && !justDone && (
         <p className="form-success">
@@ -106,25 +114,28 @@ export default function Lesson() {
 
       <p className="lesson-content">{lesson.content}</p>
 
-      {quiz && !readDone && (
+      {!showQuiz && (
         <section className="section">
-          <button type="button" onClick={() => setReadDone(true)}>
-            Hoàn thành bài học
+          <button type="button" onClick={completeLesson} disabled={busy}>
+            {busy ? 'Đang lưu…' : 'Hoàn thành bài học'}
           </button>
           <p className="muted">
-            Bài này có quiz — hoàn thành phần đọc trước, sau đó làm quiz đạt tối thiểu 80% để chốt.
+            {quiz
+              ? 'Bài này có quiz — nhấn "Hoàn thành bài học" để làm quiz, đạt tối thiểu 80% mới qua bài tiếp theo.'
+              : next
+                ? 'Nhấn "Hoàn thành bài học" để lưu tiến độ và chuyển sang bài tiếp theo.'
+                : 'Đây là bài cuối — nhấn "Hoàn thành bài học" để lưu tiến độ và quay lại khóa học.'}
           </p>
         </section>
       )}
 
-      {quiz && readDone ? (
+      {quiz && showQuiz && (
         <section className="section">
           <h2>Quiz ({quiz.questions.length} câu)</h2>
           {quiz.questions.map((q, qi) => (
             <fieldset key={qi} className="quiz-question" disabled={result != null}>
-              <legend>
-                Câu {qi + 1}: {q.q}
-              </legend>
+              {/* Câu hỏi seed có sẵn "Câu N ..." — chỉ đánh số khi câu hỏi chưa tự đánh số */}
+              <legend>{/^câu\s*\d+/i.test(q.q) ? q.q : `Câu ${qi + 1}: ${q.q}`}</legend>
               {q.options.map((opt, oi) => (
                 <label key={oi} className="quiz-option">
                   <input
@@ -165,18 +176,6 @@ export default function Lesson() {
             <button type="button" onClick={submitQuiz} disabled={!allAnswered || busy}>
               {busy ? 'Đang chấm…' : 'Nộp bài'}
             </button>
-          )}
-        </section>
-      ) : quiz ? null : (
-        <section className="section">
-          {progress != null ? (
-            <p className="form-success">Đã hoàn thành bài học — tiến độ khóa: {progress}% 🎉</p>
-          ) : (
-            !detail.completed && (
-              <button type="button" onClick={completeLesson} disabled={busy}>
-                {busy ? 'Đang lưu…' : 'Hoàn thành bài học'}
-              </button>
-            )
           )}
         </section>
       )}

@@ -39,7 +39,7 @@ namespace StudyGraph.Api.Repositories
             FILTER ld.CourseKey == @courseKey
             RETURN 1
         )
-        LET progress = total == 0 ? 0 : ROUND(100 * done / total)
+        LET progress = total == 0 ? 0 : FLOOR(100 * done / total)
         FOR e IN enrolled_in
           FILTER e._from == @userId AND e._to == CONCAT("courses/", @courseKey)
           UPDATE e WITH { Progress: progress } IN enrolled_in
@@ -69,6 +69,8 @@ namespace StudyGraph.Api.Repositories
 
         // Tính lại % hoàn thành rồi ghi vào edge enrolled_in.
         // Tách riêng khỏi UpsertCompletedAql vì AQL cấm đọc collection vừa sửa trong cùng 1 query.
+        // Dùng FLOOR (không ROUND): tránh 199/200 làm tròn thành 100% → khóa bị coi là
+        // hoàn thành (Progress == 100 dùng trong MyCompletedCourseIdsAql) khi chưa học hết.
         private const string RecomputeProgressAql = """
         LET lesson = DOCUMENT(@lessonId)
         LET courseId = CONCAT("courses/", lesson.CourseKey)
@@ -80,21 +82,25 @@ namespace StudyGraph.Api.Repositories
             FILTER ld.CourseKey == lesson.CourseKey
             RETURN 1
         )
-        LET progress = total == 0 ? 0 : ROUND(100 * done / total)
+        LET progress = total == 0 ? 0 : FLOOR(100 * done / total)
         FOR e IN enrolled_in
           FILTER e._from == @userId AND e._to == courseId
           UPDATE e WITH { Progress: progress } IN enrolled_in
           RETURN NEW.Progress
         """;
 
-        // Học tuần tự: bài N chỉ mở khi bài N-1 (cùng khóa) đã có edge completed.
-    // Edge completed của bài có quiz chỉ được tạo khi quiz đạt >= 80% (QuizService),
-    // nên check này đồng thời bao luôn rule "quiz phải đạt 80% mới qua bài tiếp theo".
-    private const string PreviousLessonCompletedAql = """
+        // Học tuần tự: bài N chỉ mở khi bài liền trước (cùng khóa) đã có edge completed.
+        // Edge completed của bài có quiz chỉ được tạo khi quiz đạt >= 80% (QuizService),
+        // nên check này đồng thời bao luôn rule "quiz phải đạt 80% mới qua bài tiếp theo".
+        // "Bài liền trước" = bài có Order LỚN NHẤT nhỏ hơn Order hiện tại (không dùng Order - 1
+        // vì admin xóa bài giữa chừng có thể để lại lỗ trong dãy Order → check bị vô hiệu).
+        private const string PreviousLessonCompletedAql = """
         LET lesson = DOCUMENT(@lessonId)
         LET prev = FIRST(
           FOR l IN lessons
-            FILTER l.CourseKey == lesson.CourseKey AND l.Order == lesson.Order - 1
+            FILTER l.CourseKey == lesson.CourseKey AND l.Order < lesson.Order
+            SORT l.Order DESC
+            LIMIT 1
             RETURN l
         )
         RETURN prev == null
@@ -129,7 +135,7 @@ namespace StudyGraph.Api.Repositories
           RETURN l._key
         """;
 
-        /// <summary>Bài trước (Order - 1) đã hoàn thành chưa? Bài đầu tiên luôn true.</summary>
+        /// <summary>Bài liền trước (theo Order) đã hoàn thành chưa? Bài đầu tiên luôn true.</summary>
         public async Task<bool> PreviousLessonCompletedAsync(string userKey, string lessonKey)
         {
             var cursor = await client.Cursor.PostCursorAsync<bool>(
@@ -143,6 +149,22 @@ namespace StudyGraph.Api.Repositories
                     }
                 });
             return cursor.Result.FirstOrDefault();
+        }
+
+        /// <summary>User đã ghi danh khóa chứa bài học này chưa? Dùng chặn cả complete tay lẫn nộp quiz.</summary>
+        public async Task<bool> IsEnrolledForLessonAsync(string userKey, string lessonKey)
+        {
+            var cursor = await client.Cursor.PostCursorAsync<int>(
+                new PostCursorBody
+                {
+                    Query = IsEnrolledForLessonAql,
+                    BindVars = new Dictionary<string, object>
+                    {
+                        ["userId"] = $"users/{userKey}",
+                        ["lessonId"] = $"lessons/{lessonKey}"
+                    }
+                });
+            return cursor.Result.Any();
         }
 
         public async Task<EnrolledInEdge> EnrollAsync(string userKey, string courseKey)
@@ -204,17 +226,7 @@ namespace StudyGraph.Api.Repositories
             var userId = $"users/{userKey}";
             var lessonId = $"lessons/{lessonKey}";
 
-            var enrolledCheck = await client.Cursor.PostCursorAsync<int>(
-                new PostCursorBody
-                {
-                    Query = IsEnrolledForLessonAql,
-                    BindVars = new Dictionary<string, object>
-                    {
-                        ["userId"] = userId,
-                        ["lessonId"] = lessonId
-                    }
-                });
-            if (!enrolledCheck.Result.Any()) return null;
+            if (!await IsEnrolledForLessonAsync(userKey, lessonKey)) return null;
 
             await client.Cursor.PostCursorAsync<CompletedEdge>(
                 new PostCursorBody

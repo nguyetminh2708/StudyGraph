@@ -1,0 +1,7 @@
+Query,Engine,Scale,Param,P50_ms,P95_ms,P99_ms,Min_ms,Max_ms,N
+Q1,ArangoDB,nho,u005,9.165,13.736,24.830,5.247,24.830,100
+Q2,ArangoDB,nho,u005,5.329,6.615,9.462,3.910,9.462,100
+Q3,ArangoDB,nho,c-aspnet-301,4.298,5.380,7.910,3.279,7.910,100
+Q1,SQLServer,nho,u005,1.151,1.587,1.999,0.913,1.999,100
+Q2,SQLServer,nho,u005,0.687,0.885,1.052,0.588,1.052,100
+Q3,SQLServer,nho,c-aspnet-301,0.875,1.216,3.026,0.730,3.026,100
